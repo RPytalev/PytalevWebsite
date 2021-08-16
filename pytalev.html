@@ -113,20 +113,9 @@
       function showButton() {
         window.scrollTo(pageXOffset, 0);
       };
-
       window.addEventListener('scroll', function() {
         var pytalevPageButton = document.querySelector('#pytalev-page-button');
         pytalevPageButton.hidden = (pageYOffset < document.documentElement.clientHeight/2);
-        
-        let timerId = setTimeout(() => {
-        var pytalevPageEmailLink1 = document.querySelector('#email-1');
-        var pytalevPageEmailLink2 = document.querySelector('#email-2');
-        var pytalevPageEmailLink3 = document.querySelector('#email-3');
-        pytalevPageEmailLink1.hidden = false;
-        pytalevPageEmailLink2.hidden = false;
-        pytalevPageEmailLink3.hidden = false;
-        }, 2000);
-        clearTimeout(timerId);
       });
     </script>
     <!-- <script src="map.js"></script> -->
