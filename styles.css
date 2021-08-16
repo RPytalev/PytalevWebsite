@@ -334,7 +334,7 @@ html {
 
 .navbar-logo {
     float: left;
-    margin: 1rem;
+    margin: 1rem 5rem;
 	width: 4rem;
 	height: 4rem;
 	perspective: 15rem;
@@ -410,7 +410,7 @@ html {
 .navbar-links {
     display: flex;
     float: right;
-    margin: 1rem;
+    margin: 1rem 5rem;
 }
 
 .navbar-link {
@@ -618,7 +618,6 @@ html {
 
 .contact > a {
     color: #525252;
-    visibility: hidden;
 }
 
 .contact > a:hover {
