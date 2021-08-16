@@ -481,8 +481,8 @@ html {
     top: 50%;
     width: 2rem;
     height: 2rem;
-    border-top: 1rem solid #d3d3d3;
-    border-right: 1rem solid #ebebeb;
+    border-top: 1rem solid rgba(255, 120, 0, .5);
+    border-right: 1rem solid #ff7800;
     margin: 1rem;
 } 
 
@@ -498,7 +498,7 @@ html {
 
 .slider-buttons:hover {
     border-top-color: #ff7800;
-    border-right-color: #ff8821;
+    border-right-color: rgba(255, 120, 0, .5);
     opacity: .9;
 } 
 
