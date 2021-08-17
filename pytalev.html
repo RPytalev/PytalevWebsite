@@ -25,7 +25,11 @@
           <a href="/index.html">
             <div class="navbar-logo">
               <div class="cube">
-                <div id="inside" class="side front"><img src="images/logo-white.png" alt="logo"></div>
+                <div class="side front"></div>
+                <div id="pytalevPageLogoInside">
+                  <img id="white-logo" src="/images/logo-white.png" alt="white logo P">
+                  <img id="orange-logo" src="/images/logo-orange.png" hidden alt="orange logo P">
+                </div>
                 <div class="side back"></div>
                 <div class="side right"></div>
                 <div class="side left"></div>
@@ -121,6 +125,38 @@
             studioPageButton.style.borderColor = '#ff7800';
           } else {
             studioPageButton.style.borderColor = 'white';
+          }
+
+          var front = document.querySelector('.front');
+      var back = document.querySelector('.back');
+      var right = document.querySelector('.right');
+      var left = document.querySelector('.left');
+      var top = document.querySelector('.top');
+      var bottom = document.querySelector('.bottom');
+      var logoWhite = document.querySelector('#white-logo');
+      var logoOrange = document.querySelector('#orange-logo')
+      var navbar = document.querySelector('.navbar');
+      var coordsNavbar = navbar.getBoundingClientRect();
+      var coordsLogo = logoWhite.getBoundingClientRect();
+
+      if(coordsLogo.bottom >= coordsNavbar.bottom) {
+        front.style.borderColor = '#ff7800';
+        back.style.borderColor = '#ff7800';
+        right.style.borderColor = '#ff7800';
+        left.style.borderColor = '#ff7800';
+        top.style.borderColor = '#ff7800';
+        bottom.style.borderColor = '#ff7800';
+        logoWhite.style.visibility = 'hidden';
+        logoOrange.hidden = false;
+        } else {
+          front.style.borderColor = 'white';
+          back.style.borderColor = 'white';
+          right.style.borderColor = 'white';
+          left.style.borderColor = 'white';
+          top.style.borderColor = 'white';
+          bottom.style.borderColor = 'white';
+          logoWhite.style.visibility = 'visible';
+          logoOrange.hidden = true;
           }
         });
     </script>

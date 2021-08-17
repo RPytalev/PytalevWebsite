@@ -378,12 +378,14 @@ html {
 }
 
 .navbar-logo img {
+    position: absolute;
     width: 4rem;
     height: 4rem;
     background-size: cover;
     background-repeat: no-repeat;
     vertical-align: middle;
 }
+
 
 .navbar-links {
     display: flex;
@@ -552,7 +554,10 @@ html {
 
 .studio-page-content .navbar-logo {
     position: fixed;
-    background-color: #ff7800;
+}
+
+#studioPageLogoInside img {
+    position: absolute;
 }
 
 .project {
@@ -601,7 +606,10 @@ html {
 
 .pytalev-page-content .navbar-logo {
     position: fixed;
-    background-color: #ff7800;
+}
+
+#pytalevPageLogoInside img {
+    position: absolute;
 }
 
 .pytalev-page-content h1 {
