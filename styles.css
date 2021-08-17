@@ -18,28 +18,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.page-buttons {
-    width: 2rem;
-    height: 2rem;
-    border-top: 1rem solid #ff7800;
-    border-right: 1rem solid rgb(255, 120, 0, .5);
-} 
-
-.page-buttons {
-    position: fixed;
-    bottom: 2%;
-    right: 4%;
-}
-
-.page-buttons:hover {
-    border-top-color: rgba(255, 120, 0, .5);
-    border-right-color: #ff7800;
-} 
-
-.button-up {     
-    transform: rotate(-45deg); 
-} 
-
 .copyright {
     font-size: 1.4rem;
     padding: 2rem;
@@ -400,12 +378,14 @@ html {
 }
 
 .navbar-logo img {
+    position: absolute;
     width: 4rem;
     height: 4rem;
     background-size: cover;
     background-repeat: no-repeat;
     vertical-align: middle;
 }
+
 
 .navbar-links {
     display: flex;
@@ -476,31 +456,48 @@ html {
     background-color: lightpink;
 }
 
-.slider-buttons {
+.slider-buttons-prev-wrapper {
+    display: flex;
     position: absolute;
-    top: 50%;
+    top: 45%;
+    left: 2rem;
     width: 2rem;
     height: 2rem;
-    border-top: 1rem solid #d3d3d3;
-    border-right: 1rem solid #ebebeb;
-    margin: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-buttons-next-wrapper {
+    display: flex;
+    position: absolute;
+    top: 45%;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-buttons {
+    display: flex;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-top: .1rem solid #ff7800;
+    border-right: .1rem solid #ff7800;
 } 
 
 .prev {
-    left: .5rem;
+    top: .5rem;
+    left: .7rem;
     transform: rotate(-135deg);
 }
 
 .next {
-    right: .5rem;
+    top: .5rem;
+    left: .3rem;
     transform: rotate(45deg);
 }
-
-.slider-buttons:hover {
-    border-top-color: #ff7800;
-    border-right-color: #ff8821;
-    opacity: .9;
-} 
 
 .section {
     display: flex;
@@ -557,7 +554,10 @@ html {
 
 .studio-page-content .navbar-logo {
     position: fixed;
-    background-color: #ff7800;
+}
+
+#studioPageLogoInside img {
+    position: absolute;
 }
 
 .project {
@@ -565,6 +565,32 @@ html {
     height: 60rem;
     background-color: #d3d3d3;
     margin: 1rem;
+}
+
+.studio-button-wrapper {
+    display: flex;
+    position: fixed;
+    bottom: 2rem;
+    right: 5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.studio-button {
+    display: flex;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-top: .1rem solid white;
+    border-right: .1rem solid white;
+} 
+
+.up {
+    top: .7rem;
+    left: .5rem;
+    transform: rotate(-45deg); 
 }
 /*--@ End of Studio page @--*/
 
@@ -580,7 +606,10 @@ html {
 
 .pytalev-page-content .navbar-logo {
     position: fixed;
-    background-color: #ff7800;
+}
+
+#pytalevPageLogoInside img {
+    position: absolute;
 }
 
 .pytalev-page-content h1 {
@@ -644,9 +673,35 @@ html {
 }
 
 .pytalev-page-content iframe {
-    width: 100vw;
+    width: 80vw;
     height: 10rem;
     padding: 2rem;
+}
+
+.pytalev-button-wrapper {
+    display: flex;
+    position: fixed;
+    bottom: 2rem;
+    right: 5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pytalev-button {
+    display: flex;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-top: .1rem solid white;
+    border-right: .1rem solid white;
+} 
+
+.up {
+    top: .7rem;
+    left: .5rem;
+    transform: rotate(-45deg); 
 }
 /*--@ End of Pytalev page @--*/
 
