@@ -678,6 +678,11 @@ html {
     padding: 2rem;
 }
 
+#map {
+    height: 400px;
+    width: 100%;
+}
+
 .pytalev-button-wrapper {
     display: flex;
     position: fixed;
