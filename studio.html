@@ -48,7 +48,9 @@
       <div class="project"></div>
       <div class="project"></div>
       <div class="project"></div>
-      <a id="studio-page-button" href="#top" class="page-buttons button-up" hidden onclick="showButton()"></a>
+      <a class="studio-button-wrapper" onmouseenter="mouseenterStudioButtonUp()" onmouseleave="mouseleaveStudioButtonUp()">
+        <div class="studio-button up" onclick="showStudioButton()"></div>
+      </a>
       <p class="copyright">&copy 2021  Pytalev</p>
     </div>
 <!--@ Spinner @-->
@@ -96,16 +98,19 @@
 </div>
 <!--@ End of Topbar @-->
     <!--@ End of Studio page @-->
-
     <script src="script.js"></script>
     <script>
-function showButton() {
-  window.scrollTo(pageXOffset, 0);
-};
-window.addEventListener('scroll', function() {
-  var studioPageButton = document.querySelector('#studio-page-button');
-  studioPageButton.hidden = (pageYOffset < document.documentElement.clientHeight/2);
-});
+      function showStudioButton() {
+        window.scrollTo(pageXOffset, 0);
+        };
+        window.addEventListener('scroll', function() {
+          var studioPageButton = document.querySelector('.up');
+          if(pageYOffset > document.documentElement.clientHeight/2) {
+            studioPageButton.style.borderColor = '#ff7800';
+          } else {
+            studioPageButton.style.borderColor = 'white';
+          }
+        });
     </script>
   </body>
 </html>
