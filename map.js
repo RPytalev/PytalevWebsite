@@ -1,23 +1,21 @@
 'use strict'
 
 function initMap() {
+    var coordinates = {lat: 53.897351, lng: 27.555742};
 
-    return function() {
-        var coordinates = {lat: 53.897351, lng: 27.555742},
-        markerImage = 'images/logo.svg',
-        zoom = 15,
-    
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: coordinates,
-            zoom: zoom,
-            disableDefaultUI: true
-        }),
-    
-        marker = new google.maps.Marker({
-            position: coordinates,
-            map: map,
-            icon: markerImage
-        });
-    }
-} 
+    var map = new google.maps.Map(document.getElementById('map'), {
+        mapId: 'eda0aac7d7a5ae65',
+        center: coordinates,
+        zoom: 15,
+        disableDefaultUI: true
+    });
 
+    var marker = new google.maps.Marker({
+        position: coordinates,
+        map: map,
+        icon: {
+            url: 'images/logo-orange.png',
+            scaledSize: new google.maps.Size(50, 50),
+        }
+    });
+}

@@ -648,6 +648,11 @@ html {
     height: 10rem;
     padding: 2rem;
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+}
 /*--@ End of Pytalev page @--*/
 
 /*--@ School page @--*/
