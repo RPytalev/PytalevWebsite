@@ -61,7 +61,7 @@
           <!-- <div id="map"></div> -->
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.9349021552393!2d27.553764315859276!3d53.89736098009817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfc2f68543a5%3A0xb225f10fdcc96f6c!2sKarla%20Marksa%2021%2C%20Minsk!5e0!3m2!1sen!2sby!4v1628173475025!5m2!1sen!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           <a class="pytalev-button-wrapper" onmouseenter="mouseenterPytalevButtonUp()" onmouseleave="mouseleavePytalevButtonUp()">
-            <div class="pytalev-button up" onclick="showPytalevButton()"></div>
+            <div class="pytalev-button up" onclick="clickPytalevButton()"></div>
           </a>
           <p class="copyright">&copy 2021  Pytalev</p>
       </div> 
@@ -112,7 +112,7 @@
     <!--@ End of Pytalev page @-->
     <script src="script.js"></script>
     <script>
-      function showPytalevButton() {
+      function clickPytalevButton() {
         window.scrollTo(pageXOffset, 0);
         };
         window.addEventListener('scroll', function() {
