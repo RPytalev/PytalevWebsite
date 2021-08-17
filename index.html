@@ -28,7 +28,9 @@
           <a href="/index.html">
             <div class="navbar-logo">
               <div class="cube">
-                <div id="inside" class="side front"><img src="images/logo-white.png" alt="logo"></div>
+                <div id="inside" class="side front">
+                  <img src="images/logo-white.png" alt="logo">
+                </div>
                 <div class="side back"></div>
                 <div class="side right"></div>
                 <div class="side left"></div>
@@ -49,9 +51,9 @@
         <!--@ Slider @-->
         <div class="slider">
           <div class="slider-wrapper">
-            <div class="slider-buttons-wrapper">
-              <a href="#" class="slider-buttons prev" role="button"></a>
-            </div>            
+            <a class="slider-buttons-prev-wrapper" onmouseenter="mouseenterPrevButton()" onmouseleave="mouseleavePrevButton()">
+              <div class="slider-buttons prev"></div>
+            </a>            
             <div class="slider-viewport">
               <div class="slider-roll">
 
@@ -63,9 +65,9 @@
                 <div class="slide slide-6">6</div>
               </div>
             </div>
-            <div class="slider-buttons-wrapper">
-              <a href="#" class="slider-buttons next" role="button"></a>
-            </div>
+            <a class="slider-buttons-next-wrapper" onmouseenter="mouseenterNextButton()" onmouseleave="mouseleaveNextButton()">
+              <div class="slider-buttons next"></div>
+            </a>
           </div>
         </div>
         <!--@ End of slider @-->
