@@ -2,11 +2,11 @@
 window.onload = function() {
 
   document.body.classList.add('hide');
-
+  
   window.setTimeout(function() {
     document.body.classList.add('show');
     document.body.classList.remove('hide');
-  }, 300);
+  }, 500);
 }
 
 document.querySelector('.hamburger-menu').addEventListener('click', function() {

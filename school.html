@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
      <!--@ Meta @-->
     <meta charset="UTF-8">
@@ -15,9 +14,22 @@
     <link rel="shortcut icon" type="image/png" href="favicon-orange.png">
     <link rel="stylesheet" href="styles.css">
   </head>
-
-  <body  oncopy="alert('Dear user! Copying is not allowed! All rights reserved! Come to our web development school and we will teach you how to create even better than what you wanted to copy!'); return false">
-   
+  <body oncopy="alert('Dear user! Copying is not allowed! All rights reserved! Come to our web development school and we will teach you how to create even better than what you wanted to copy!'); return false">
+    <!--@ Spinner @-->
+    <div class="spinner-wrap">
+      <div class="spinner">
+        <div class="blade1-wrap">
+          <div class="blade1"></div>
+        </div>
+        <div class="blade2-wrap">
+          <div class="blade2"></div>
+        </div>
+        <div class="blade3-wrap">
+          <div class="blade3"></div>
+        </div>
+      </div>
+    </div>
+    <!--@ End of Spinner @-->    
     <!--@ School page @-->
     <div id="top" class="school-page-content">
       <!--@ Navbar @-->
@@ -34,62 +46,44 @@
             </div>
           </div>
         </a>
-      
         <div class="navbar-links">
           <div> <a href="/studio.html" class="navbar-link">Studio</a></div>
           <div> <a href="/pytalev.html" class="navbar-link">Pytalev</a></div>
           <div> <a href="/school.html" class="navbar-link">School</a></div>
         </div>
       </nav>
-        <!--@ End of Navbar @-->
-          <h1 class="school-header">This page is under construction</h1>
-          <p class="copyright">&copy 2021  Pytalev</p>
+      <!--@ End of Navbar @-->
+      <h1 class="school-header">This page is under construction</h1>
+      <p class="copyright">&copy 2021  Pytalev</p>
     </div>
- <!--@ Spinner @-->
- <div class="spinner-wrap">
-  <div class="spinner">
-    <div class="blade1-wrap">
-      <div class="blade1"></div>
-    </div>
-    <div class="blade2-wrap">
-      <div class="blade2"></div>
-    </div>
-    <div class="blade3-wrap">
-      <div class="blade3"></div>
-    </div>
-  </div>
-</div>
-<!--@ End of Spinner @-->
-
-<!--@ Hamburger menu @-->
-<div class="hamburger-menu">
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-</div>
-<!--@ End of Hamburger menu @-->
-
-<!--@ Topbar @-->
-<div class="topbar">
-  <ul class="topbar-menu">
-    <li class="menu-item">
-      <a href="/studio.html" class="menu-link">Studio</a>
-    </li>
-    <li class="menu-item">
-      <a href="/pytalev.html" class="menu-link">Pytalev</a>
-    </li>
-    <li class="menu-item">
-      <a href="/school.html" class="menu-link">School</a>
-    </li>
-  </ul>
-  <div class="social-media">
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-  </div>
-</div>
-<!--@ End of Topbar @-->
     <!--@ End of School page @-->
+    <!--@ Hamburger menu @-->
+    <div class="hamburger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <!--@ End of Hamburger menu @-->
+    <!--@ Topbar @-->
+    <div class="topbar">
+      <ul class="topbar-menu">
+        <li class="menu-item">
+          <a href="/studio.html" class="menu-link">Studio</a>
+        </li>
+        <li class="menu-item">
+          <a href="/pytalev.html" class="menu-link">Pytalev</a>
+        </li>
+        <li class="menu-item">
+          <a href="/school.html" class="menu-link">School</a>
+        </li>
+      </ul>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <!--@ End of Topbar @-->
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
      <!--@ Meta @-->
     <meta charset="UTF-8">
@@ -15,9 +14,22 @@
     <link rel="shortcut icon" type="image/png" href="favicon-orange.png">
     <link rel="stylesheet" href="styles.css">
   </head>
-
-  <body  oncopy="alert('Dear user! Copying is not allowed! All rights reserved! Come to our web development school and we will teach you how to create even better than what you wanted to copy!'); return false">
-    
+  <body oncopy="alert('Dear user! Copying is not allowed! All rights reserved! Come to our web development school and we will teach you how to create even better than what you wanted to copy!'); return false">
+    <!--@ Spinner @-->
+    <div class="spinner-wrap">
+      <div class="spinner">
+        <div class="blade1-wrap">
+          <div class="blade1"></div>
+        </div>
+        <div class="blade2-wrap">
+          <div class="blade2"></div>
+        </div>
+        <div class="blade3-wrap">
+          <div class="blade3"></div>
+        </div>
+      </div>
+    </div>
+    <!--@ End of Spinner @-->    
     <!--@ Pytalev page @-->
       <div id="top" class="pytalev-page-content">
         <!--@ Navbar @-->
@@ -38,7 +50,6 @@
               </div>
             </div>
           </a>
-
           <div class="navbar-links">
             <li> <a href="/studio.html" class="navbar-link">Studio</a> </li>
             <li> <a href="/pytalev.html" class="navbar-link">Pytalev</a> </li>
@@ -48,42 +59,27 @@
         <!--@ End of Navbar @-->
         <h1>Who is Pytalev?</h1>
         <p class="cv">Roman Pytalev is one of those who completely devoted his life teaching. Lives in the paradigm "life through learning, learning through creativity". Born in Moscow, Russia in 1973, lives and works in Minsk, Belarus. PhD. Assistant professor. Webmaster.</p>
-      <div class="img-wrapper">
+        <div class="img-wrapper">
         <img src="images/selfie.jpg" alt="selfie of Roman Pytalev">
-      </div>
-      <div id="fullName" class="contact">Roman Pytalev</div>
-      <div id="street" class="contact">21 K.Marksa str</div>
-      <div id="city" class="contact">Minsk 220030</div>
-      <div id="country" class="contact">Belarus</div>
-      <div id="phone" class="contact">TF +375 (29) 383 0000</div>
-      <div id="generalRequest" class="contact">General req:</div>
-      <div id="email-1" class="contact"><a href="mailto: roman@pytalev.com">roman@pytalev.com</a></div>
-      <div id="CollaborationRequest" class="contact">Collaboration req:</div>
-      <div id="email-2" class="contact"><a href="mailto: collaboration@pytalev.com">collaboration@pytalev.com</a></div>
-      <div id="TrainingRequest" class="contact">Training req:</div>
-      <div id="email-3" class="contact"><a href="mailto: training@pytalev.com">training@pytalev.com</a></div>
-          <div id="map"></div>
-          <a class="pytalev-button-wrapper" onmouseenter="mouseenterPytalevButtonUp()" onmouseleave="mouseleavePytalevButtonUp()">
-            <div class="pytalev-button up" onclick="clickPytalevButton()"></div>
-          </a>
-          <p class="copyright">&copy 2021  Pytalev</p>
-      </div> 
-      <!--@ Spinner @-->
-      <div class="spinner-wrap">
-        <div class="spinner">
-          <div class="blade1-wrap">
-            <div class="blade1"></div>
-          </div>
-          <div class="blade2-wrap">
-            <div class="blade2"></div>
-          </div>
-          <div class="blade3-wrap">
-            <div class="blade3"></div>
-          </div>
         </div>
-      </div>
-      <!--@ End of Spinner @-->
-
+        <div id="fullName" class="contact">Roman Pytalev</div>
+        <div id="street" class="contact">21 K.Marksa str</div>
+        <div id="city" class="contact">Minsk 220030</div>
+        <div id="country" class="contact">Belarus</div>
+        <div id="phone" class="contact">TF +375 (29) 383 0000</div>
+        <div id="generalRequest" class="contact">General req:</div>
+        <div id="email-1" class="contact"><a href="mailto: roman@pytalev.com">roman@pytalev.com</a></div>
+        <div id="CollaborationRequest" class="contact">Collaboration req:</div>
+        <div id="email-2" class="contact"><a href="mailto: collaboration@pytalev.com">collaboration@pytalev.com</a></div>
+        <div id="TrainingRequest" class="contact">Training req:</div>
+        <div id="email-3" class="contact"><a href="mailto: training@pytalev.com">training@pytalev.com</a></div>
+        <div id="map"></div>
+        <a class="pytalev-button-wrapper" onmouseenter="mouseenterPytalevButtonUp()" onmouseleave="mouseleavePytalevButtonUp()">
+          <div class="pytalev-button up" onclick="clickPytalevButton()"></div>
+        </a>
+        <p class="copyright">&copy 2021  Pytalev</p>
+      </div> 
+      <!--@ End of Pytalev page @-->
       <!--@ Hamburger menu @-->
       <div class="hamburger-menu">
         <div class="line"></div>
@@ -91,7 +87,6 @@
         <div class="line"></div>
       </div>
       <!--@ End of Hamburger menu @-->
-
       <!--@ Topbar @-->
       <div class="topbar">
         <ul class="topbar-menu">
@@ -112,7 +107,6 @@
         </div>
       </div>
       <!--@ End of Topbar @-->
-    <!--@ End of Pytalev page @-->
     <script src="script.js"></script>
     <script>
       function clickPytalevButton() {
@@ -125,8 +119,7 @@
           } else {
             studioPageButton.style.borderColor = 'white';
           }
-
-          var front = document.querySelector('.front');
+      var front = document.querySelector('.front');
       var back = document.querySelector('.back');
       var right = document.querySelector('.right');
       var left = document.querySelector('.left');
