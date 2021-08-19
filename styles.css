@@ -448,11 +448,6 @@ html {
     flex: 0 0 50%;
     width: 80vw;
     height: 70vh;
-    text-align: center;
-    padding-top: 24rem;
-    font-size: 5rem;
-    color: #ff7800;
-    background-color: lightyellow;
 }
 
 .slide:nth-of-type(2n) {
