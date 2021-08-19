@@ -80,7 +80,7 @@
     100% {
         transform: translateZ(0rem);
         font-size: 10rem;
-        background-color: white;
+        background-color: hsl(0, 0%, 100%);
     }
 }
 
