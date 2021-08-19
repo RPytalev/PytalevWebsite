@@ -1,0 +1,118 @@
+
+.slide-1 {
+    perspective: 2rem;
+}
+
+.main-stage-welcome {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.backstage {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+	width: 100%;
+	height: 100%;
+    background-color: black;
+}
+
+.backstage-left {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    z-index: 555;
+    animation: moveL 5s 1 both;
+}
+
+@keyframes moveL {
+    0% {
+        transform: translateX(0rem);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.backstage-right {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    z-index: 555;
+    animation: moveR 5s 1 both;
+}
+
+@keyframes moveR {
+    0% {
+        transform: translateX(0rem);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.stage-welcome {
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+	width: 100%;
+	height: 100%;
+    padding-top: 15%;
+    color: #ff7800;
+    font-size: 0;
+    text-align: center;
+    transform: translateZ(-1rem);
+    animation: scale1 .1s 5.6s 1 both;
+}
+
+@keyframes scale1 {
+    0% {
+        transform: translateZ(-1rem);
+        font-size: 0;
+        background-color: black;
+    }
+    100% {
+        transform: translateZ(0rem);
+        font-size: 10rem;
+        background-color: white;
+    }
+}
+
+.stage-hello {
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+	width: 100%;
+	height: 100%;
+    padding-top: 15%;
+    color: black;
+    font-size: 0;
+    text-align: center;
+    transform: translateZ(-1rem);
+    animation: scale2 5.3s 1 both;
+}
+
+@keyframes scale2 {
+    0% {
+        transform: translateZ(-1rem);
+        font-size: 0;
+        color: black;
+    }
+    95% {
+        transform: translateZ(0rem);
+        color: white;
+        font-size: 10rem;
+    }
+    100% {
+        transform: translateZ(0rem);
+        color: black;
+        font-size: 0;
+    }
+}
