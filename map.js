@@ -13,9 +13,14 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: coordinates,
         map: map,
+        animation: google.maps.Animation.BOUNCE,
         icon: {
             url: 'images/logo-orange.png',
             scaledSize: new google.maps.Size(50, 50),
         }
+        
     });
 }
+
+
+
