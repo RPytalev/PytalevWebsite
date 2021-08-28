@@ -559,10 +559,28 @@ html {
 }
 
 .project {
+    display: flex;
+    position: relative;
     width: 80vw;
-    height: 60rem;
+    height: 90vh;
     background-color: #d3d3d3;
     margin: 1rem;
+    overflow: scroll;
+}
+
+.project-content-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.welcome img {
+    position: relative;
+    width: 100%;
+    height: 50rem;
+    object-fit: contain;
 }
 
 .studio-button-wrapper {
