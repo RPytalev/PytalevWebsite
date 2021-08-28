@@ -18,6 +18,14 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
 .copyright {
     font-size: 1.4rem;
     padding: 2rem;
@@ -26,12 +34,12 @@ html {
 }
 
 /*--@ Spinner @--*/
-.hide .spinner-wrap {
-    opacity: 1;
+canvas {
+    display: none;
 }
 
-.show .spinner-wrap {
-    display: none;
+.spinner-img { 
+    animation: rotator 1s infinite both;
 }
 
 @keyframes rotator {
@@ -41,159 +49,6 @@ html {
     100% {
       transform: rotate(1080deg);
     }
-}
-
-.spinner-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-}
-
-.spinner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    margin: 0 auto;
-    width: 4rem;
-    height: 4rem;
-    border: 1rem solid #ff7800;
-    border-radius: 50%;
-}
-
-.blade1-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -3.8rem;
-    width: 4rem;
-    height: 8rem;
-    vertical-align: bottom;
-    transform-origin: center bottom;
-    animation: rotator 1s infinite both; 
-}
-
-.blade1 {
-    display: block;
-    position: absolute;
-    width: 4rem;
-    height: 4rem;
-    top: 1.5rem;
-    border-radius: 50%;
-    background-color: #ff7800;
-    z-index: 1;
-}
-
-.blade1-wrap::before {
-    content: '';
-    position: absolute;
-    top: 2.25rem;
-    border: solid white;
-    border-radius: 50%;
-    border-width: 2.5rem 0 0 0;
-    width: 2.5rem;
-    z-index: 2;
-}
-
-.blade1-wrap::after {
-    content: '';
-    position: relative;
-    margin-top: 3rem;
-    border: solid #ff7800;
-    border-width: 2.5rem 0 0 0;
-    width: 1.5rem;
-}
-
-.blade2-wrap {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: .9rem;
-    left: .9rem;
-    width: 8rem;
-    height: 4rem;
-    transform-origin: top left;
-    animation: rotator 1s infinite both; 
-}
-
-.blade2 {
-    display: block;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background-color: #ff7800;
-    transform: rotate(27deg);
-    z-index: 1;
-}
-
-.blade2-wrap::before {
-    content: '';
-    position: absolute;
-    border: solid white;
-    border-radius: 50%;
-    border-width: 2.5rem 0 0 0;
-    width: 2.5rem;
-    z-index: 2;
-}
-
-.blade2-wrap::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 1.75rem;
-    border: solid #ff7800;
-    border-width: 2.5rem 0 0 0;
-    width: 1.5rem;
-    transform: rotate(115deg);
-}
-
-.blade3-wrap {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: 0.8rem;
-    left: -6.9rem;
-    width: 8rem;
-    height: 4rem;
-    transform-origin: top right;
-    animation: rotator 1s infinite both; 
-}
-
-.blade3 {
-    display: block;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background-color: #ff7800; 
-    transform: rotate(66deg);
-    z-index: 1;
-}
-
-.blade3-wrap::before {
-    content: '';
-    position: absolute;
-    border: solid white;
-    border-radius: 50%;
-    border-width: 2.5rem 0 0 0;
-    width: 2.5rem;
-    z-index: 2;
-}
-  
-.blade3-wrap::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 5rem;
-    border: solid #ff7800;
-    border-width: 2.5rem 0 0 0;
-    width: 1.5rem;
-    transform: rotate(64deg);
 }
 /*--@ End of Spinner @--*/
 
@@ -293,7 +148,7 @@ html {
 
 /*--@ Home page @--*/
 .home-page-content {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -542,12 +397,11 @@ html {
 
 /*--@ Studio page @--*/
 .studio-page-content {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
 }
 
 .studio-page-content .navbar-logo {
@@ -559,7 +413,6 @@ html {
 }
 
 .project {
-    display: flex;
     position: relative;
     width: 80vw;
     height: 90vh;
@@ -612,12 +465,11 @@ html {
 
 /*--@ Pytalev page  @--*/
 .pytalev-page-content {
-    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
     overflow-x: hidden;
 }
 
@@ -743,11 +595,11 @@ html {
 
 /*--@ School page @--*/
 .school-page-content {
-    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: absolute;
     width: 100%;
     height: 100%;
 }

@@ -18,22 +18,10 @@
   </head>
   <body oncopy="alert('Dear user! Copying is not allowed! All rights reserved! Come to our web development school and we will teach you how to create even better than what you wanted to copy!'); return false">
     <!--@ Spinner @-->
-    <div class="spinner-wrap">
-      <div class="spinner">
-        <div class="blade1-wrap">
-          <div class="blade1"></div>
-        </div>
-        <div class="blade2-wrap">
-          <div class="blade2"></div>
-        </div>
-        <div class="blade3-wrap">
-          <div class="blade3"></div>
-        </div>
-      </div>
-    </div>
+    <canvas id="spinner" width="300px" height="300px">Spinner image></canvas>
     <!--@ End of Spinner @-->
     <!--@ Home page @-->
-    <div class="home-page-content">
+    <div id="home-page" class="home-page-content">
      <!--@ Navbar @-->
       <nav class="navbar">
         <a href="/index.html">
@@ -51,9 +39,9 @@
           </div>
         </a>
         <div class="navbar-links">
-          <div> <a href="/studio.html" class="navbar-link">Studio</a> </div>
-          <div> <a href="/pytalev.html" class="navbar-link">Pytalev</a> </div>
-          <div> <a href="/school.html" class="navbar-link">School</a> </div>
+          <div><a href="/studio.html" class="navbar-link">Studio</a></div>
+          <div><a href="/pytalev.html" class="navbar-link">Pytalev</a></div>
+          <div><a href="/school.html" class="navbar-link">School</a></div>
         </div>
       </nav>
       <!--@ End of Navbar @-->
@@ -134,6 +122,7 @@
       </div>
     </div>
     <!--@ End of Topbar @-->
+    <script src="spinner.js"></script>
     <script src="script.js"></script>
     <!-- <script src="slider.js"></script> -->
   </body>
