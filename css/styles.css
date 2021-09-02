@@ -5,6 +5,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    overflow: scroll;
     scroll-behavior: smooth;
     -ms-overflow-style: none; 
     scrollbar-width: none;
@@ -18,6 +19,12 @@ html {
 
 a {
     text-decoration: none;
+}
+
+.copyright {
+    font-size: 1rem;
+    color: #ff7800;
+    padding: 20px 0;
 }
 
 .header__wrapper {
@@ -116,12 +123,16 @@ a {
 
 .menu__list {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
     align-items: center;
     width: 300px;
     height: 60px;
 }
 
 .menu__item {
+    display: flex;
+    width: auto;
     margin-left: 30px;
     padding: 4px 0;
     border: 1px solid transparent;
@@ -133,7 +144,6 @@ a {
 
 .menu__item:hover {
     border-bottom: 1px solid white;
-
 }
 
 .main-wrapper {
@@ -372,11 +382,11 @@ a {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: auto;
     overflow: scroll;
 }
 
-.studio-button-wrapper {
+.buttonUp-wrapper {
     display: flex;
     position: fixed;
     bottom: 40px;
@@ -385,22 +395,22 @@ a {
     height: 20px;
     border-radius: 50%;
     cursor: pointer;
+    background-color: white;
+    visibility: hidden;
 }
 
-.studio-button {
+.buttonUp {
     display: flex;
     position: absolute;
-    width: 10px;
-    height: 10px;
-    border-top: 1px solid white;
-    border-right: 1px solid white;
-} 
-
-.up {
     top: 7px;
     left: 5px;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #ff7800;
+    border-right: 1px solid #ff7800;
     transform: rotate(-45deg); 
-}
+    visibility: hidden;
+} 
 
 .projects {
     display: flex;
@@ -437,102 +447,93 @@ a {
 .projects__project-thirteenth {
     flex-basis: 33.3%;
 }
-
-.copyright {
-    font-size: 1rem;
-    padding: 10px;
-    color: #4c4c4c;
-}
 /*--@ End of Studio page @--*/
 
 /*--@ Pytalev page  @--*/
-/* .pytalev-page-content {
+.main-wrapper-pytalev-page {
     display: flex;
     flex-flow: column wrap;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
+    padding: 60px 0;
+    height: auto;
+    overflow: hidden;
 }
 
-.pytalev-page-content .navbar-logo {
-    position: fixed;
+.note-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: auto;
+    padding-top: 20px;
 }
 
-#pytalevPageLogoInside img {
-    position: absolute;
-}
-
-.pytalev-page-content h1 {
-    width: 100%;
-    font-size: 3rem;
+.title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    padding: 20px 0;
     color: #ff7800;
-    text-align: center;
-    padding-top: 4rem;
 }
 
-.cv {
-    width: 50%;
-    font-size: 20px;
-    color: #525252;
+.note-wrapper p {
+    font-size: 1.3rem;
+    color: #4c4c4c;
     text-align: justify;
-    padding: 20px;
-}
-
-.pytalev-page-content .img-wrapper {
-    width: 40rem;
-    height: 50rem;
-    background-color: gray;
-}
-
-.pytalev-page-content .img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .contact {
-    font-size: 1.8rem;
-    color: #525252;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
 }
 
-.contact > a {
-    color: #525252;
+.contact__img-wrapper {
+    width: 250px;
+    height: 350px;
 }
 
-.contact > a:hover {
+.contact__address {
+    font-size: 1.1rem;
+    padding: 0 50px;
+    color: #4c4c4c;
+}
+
+.address__details {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.contact__email-addresses {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.contact__email-addresses > a {
+    color: #4c4c4c;
+}
+
+.contact__email-addresses> a:hover {
     color: #ff7800;
     text-decoration: underline;
 }
 
-#fullName {
-    padding-top: 20px;
-}
-
-#phone {
-    padding: 20px;
-}
-
-#generalRequest,
-#CollaborationRequest,
-#TrainingRequest {
-    width: 100%;
-    text-align: left;
-    margin-left: 85%;
-    padding-top: 1rem;
-    font-size: 1.20px;
-}
-
-.pytalev-page-content iframe {
-    width: 80vw;
-    height: 10rem;
-    padding: 20px;
+iframe {
+    width: 250px;
+    height: 350px;
 }
 
 #map {
-    height: 14rem;
-    width: 50%;
-    margin: 20px;
+    display: flex;
+    align-self: flex-end;
+    width: 250px;
+    height: 350px;
 }
 
 .bounce {
@@ -546,55 +547,11 @@ a {
     100% {
         transform: translateY(0);
     }
-  }
-
-.pytalev-button-wrapper {
-    display: flex;
-    position: fixed;
-    bottom: 20px;
-    right: 5rem;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
 }
-
-.pytalev-button {
-    display: flex;
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    border-top: .1rem solid white;
-    border-right: .1rem solid white;
-} 
-
-.up {
-    top: .7rem;
-    left: .5rem;
-    transform: rotate(-45deg); 
-} */
 /*--@ End of Pytalev page @--*/
 
 /*--@ School page @--*/
-/* .school-page-content {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
 
-.school-page-content .navbar-logo {
-    position: fixed;
-}
-
-.school-header {
-    padding: 30rem;
-    font-size: 20px;
-    text-align: center;
-    color: #525252;
-} */
 /*--@ End of School page @--*/
 
 /*--@ Responsive @--*/
