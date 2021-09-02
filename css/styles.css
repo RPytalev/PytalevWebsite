@@ -1,8 +1,13 @@
+::-webkit-scrollbar { 
+    width: 0px;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    overflow: scroll;
     scroll-behavior: smooth;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
 }
 
 *,
@@ -31,6 +36,7 @@ a {
     align-items: center;
     width: 60px;
 	height: 60px;
+    padding: 0 50px;
     z-index: 555;
 }
 
@@ -133,6 +139,7 @@ a {
 .main-wrapper {
     width: inherit;
     height: 92vh;
+    overflow: hidden;
 }
 
 .slider {
@@ -215,17 +222,17 @@ a {
     flex-flow: row nowrap;
     justify-items: center;
     align-items: center;
-    width: 100px;
+    width: auto;
     height: 2vh;
 }
   
 .slider-console__slide-indicator {
-    width: 10px;
-    height: 10px;
-    margin: 5px;
+    width: 8px;
+    height: 8px;
+    margin: 4px;
     border-radius: 50%;
     background-color: lightgray;
-    transition: 1.2s ease-in-out;
+    transition: .6s ease-in-out;
 }
   
 .slider-console__slide-indicator_highlighted {
@@ -350,7 +357,6 @@ a {
 .fab {
     width: 20px;
     height: 20px;
-    /* font-size: 1.5rem; */
     color: white;
 }
 
@@ -361,50 +367,20 @@ a {
 /*--@ End of Home page @--*/
 
 /*--@ Studio page @--*/
-/* .studio-page-content {
+.main-wrapper-studio-page {
     display: flex;
-    flex-flow: row wrap;
-    width: 100%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-}
-
-.studio-page-content .navbar-logo {
-    position: fixed;
-}
-
-#studioPageLogoInside img {
-    position: absolute;
-}
-
-.project {
-    position: relative;
-    width: 80vw;
-    height: 90vh;
-    background-color: #d3d3d3;
-    margin: 1rem;
     overflow: scroll;
-}
-
-.project-content-wrapper {
-    position: relative;
-    width: 100%;
-    height: 200vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.welcome img {
-    position: relative;
-    width: 100%;
-    height: 50rem;
-    object-fit: contain;
 }
 
 .studio-button-wrapper {
     display: flex;
     position: fixed;
-    bottom: 20px;
-    right: 5rem;
+    bottom: 40px;
+    right: 40px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -414,17 +390,59 @@ a {
 .studio-button {
     display: flex;
     position: absolute;
-    width: 1rem;
-    height: 1rem;
-    border-top: .1rem solid white;
-    border-right: .1rem solid white;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
 } 
 
 .up {
-    top: .7rem;
-    left: .5rem;
+    top: 7px;
+    left: 5px;
     transform: rotate(-45deg); 
-} */
+}
+
+.projects {
+    display: flex;
+    flex-flow: row wrap;
+    width: inherit;
+    height: inherit;
+}
+
+.projects__project {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw / 6);
+    height: calc(100vw / 3);
+    border: 1px solid lightgrey;
+}
+
+.project-content {
+    display: flex;
+    width: 100%;
+    height: calc(100% / 2);
+    border: 1px solid lightgrey;
+}
+
+.projects__project-second {
+    flex-basis: 33.3%;
+}
+
+.projects__project-ninth {
+    flex-basis: 33.3%;
+}
+
+.projects__project-thirteenth {
+    flex-basis: 33.3%;
+}
+
+.copyright {
+    font-size: 1rem;
+    padding: 10px;
+    color: #4c4c4c;
+}
 /*--@ End of Studio page @--*/
 
 /*--@ Pytalev page  @--*/
