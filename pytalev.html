@@ -1,146 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-     <!--@ Meta @-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--@ MetaText @-->
-    <title>Pytalev's web studio & school HTML, CSS, JavaScript</title>
+    <title>Pytalev|Pytalev's web studio & school HTML, CSS, JavaScript</title>
     <meta name="author" content="Roman Pytalev">
     <meta name="Copyright" content="Roman Pytalev">
     <meta name="description" content="Pytalev's web studio and school is always open to web developers. This is where the code lives. HTML, CSS, JavaScript">
-     <!--@ Assets @-->
     <link rel="shortcut icon" type="image/png" href="favicon-orange.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
   <body oncopy="alert('Dear user! Copying is not allowed! All rights reserved! Come to our web development school and we will teach you how to create even better than what you wanted to copy!'); return false">
-    <!--@ Pytalev page @-->
-      <div class="pytalev-page-content">
-        <!--@ Navbar @-->
-        <nav class="navbar">
-          <a href="/index.html">
-            <div class="navbar-logo">
-              <div class="cube">
-                <div class="side front"></div>
-                <div id="pytalevPageLogoInside">
-                  <img id="white-logo" src="/images/logo-white.png" alt="white logo P">
-                  <img id="orange-logo" src="/images/logo-orange.png" hidden alt="orange logo P">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="logo">
+          <a href="index.html">
+            <div class="logo__logo-container">
+              <div class="logo-circle">
+                <div class="logo-circle__circle-line logo-circle__circle-line-1">
+                    <img id="img-logo-color-white" class="logo-circle__img" src="images/logo-white.png" alt="Logo white color">
                 </div>
-                <div class="side back"></div>
-                <div class="side right"></div>
-                <div class="side left"></div>
-                <div class="side top"></div>
-                <div class="side bottom"></div>
+                <div class="logo-circle__circle-line logo-circle__circle-line-2"></div>
+                <div class="logo-circle__circle-line logo-circle__circle-line-3"></div>
+                <div class="logo-circle__circle-line logo-circle__circle-line-4"></div>
+                <div class="logo-circle__circle-line logo-circle__circle-line-5"></div>
+                <div class="logo-circle__circle-line logo-circle__circle-line-6"></div>
+                <div class="logo-circle__circle-line logo-circle__circle-line-7"></div>
+                <div class="logo-circle__circle-line logo-circle__circle-line-8"></div>
+                <div class="logo-circle__circle-line logo-circle__circle-line-9"></div>
+                <div class="logo-circle__circle-line logo-circle__circle-line-10"></div>
               </div>
             </div>
           </a>
-          <div class="navbar-links">
-            <li><a href="/studio.html" class="navbar-link">Studio</a></li>
-            <li><a href="/pytalev.html" class="navbar-link">Pytalev</a></li>
-            <li><a href="/school.html" class="navbar-link">School</a></li>
+        </div>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="studio.html">Studio</a>
+            </li>
+            <li class="menu__item">
+              <a href="pytalev.html">Pytalev</a>
+            </li>
+            <li class="menu__item">
+              <a href="school.html">School</a>
+            </li>                    
+          </ul>
+        </nav>          
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-wrapper-pytalev-page">
+        <section class="note">
+          <h1>Who is Pytalev?</h1>
+          <p>Ph.D. Roman Pytalev is veteran of education. Adept of paradigm "study = life = creativity". Born in 1973, lives and works in Minsk, Belarus.</p>
+        </section>
+        <section class="contact">
+          <div class="contact__address">
+            <p class="tremor">Roman Pytalev</p>   
+            <p class="tremor">21 K.Marksa str</p>
+            <p class="tremor">220030 Minsk</p>
+            <p class="tremor">Belarus</p>
+            <p class="tremor">+375 (29) 383 0000</p>
           </div>
-        </nav>
-        <!--@ End of Navbar @-->
-        <h1>Who is Pytalev?</h1>
-        <p class="cv">Roman Pytalev is one of those who completely devoted his life teaching. Lives in the paradigm "life through learning, learning through creativity". Born in Moscow, Russia in 1973, lives and works in Minsk, Belarus. PhD. Assistant professor. Webmaster.</p>
-        <div class="img-wrapper">
-        <img src="images/selfie.jpg" alt="selfie of Roman Pytalev">
-        </div>
-        <div id="fullName" class="contact">Roman Pytalev</div>
-        <div id="street" class="contact">21 K.Marksa str</div>
-        <div id="city" class="contact">Minsk 220030</div>
-        <div id="country" class="contact">Belarus</div>
-        <div id="phone" class="contact">TF +375 (29) 383 0000</div>
-        <div id="generalRequest" class="contact">General req:</div>
-        <div id="email-1" class="contact"><a href="mailto: roman@pytalev.com">roman@pytalev.com</a></div>
-        <div id="CollaborationRequest" class="contact">Collaboration req:</div>
-        <div id="email-2" class="contact"><a href="mailto: collaboration@pytalev.com">collaboration@pytalev.com</a></div>
-        <div id="TrainingRequest" class="contact">Training req:</div>
-        <div id="email-3" class="contact"><a href="mailto: training@pytalev.com">training@pytalev.com</a></div>
+          <div class="contact__img-wrapper">
+            <img class="contact__img" src="images/selfie.jpg" width="250px" height="350px" alt="selfie of Roman Pytalev">         
+          </div>
+          <div class="contact__email-addresses">
+            <p>General req:</p>
+            <a href="mailto: roman@pytalev.com">roman@pytalev.com</a>
+            <p>Collaboration req:</p>
+            <a href="mailto: collaboration@pytalev.com">collaboration@pytalev.com</a>
+            <p>Training req:</p>
+            <a href="mailto: training@pytalev.com">training@pytalev.com</a>
+          </div>
+        </section>
         <div id="map"></div>
-        <a class="pytalev-button-wrapper" onmouseenter="mouseenterPytalevButtonUp()" onmouseleave="mouseleavePytalevButtonUp()">
-          <div class="pytalev-button up" onclick="clickPytalevButton()"></div>
-        </a>
         <p class="copyright">&copy 2021  Pytalev</p>
-      </div> 
-      <!--@ End of Pytalev page @-->
-      <!--@ Hamburger menu @-->
-      <div class="hamburger-menu">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <!--@ End of Hamburger menu @-->
-      <!--@ Topbar @-->
-      <div class="topbar">
-        <ul class="topbar-menu">
-          <li class="menu-item">
-            <a href="/studio.html" class="menu-link">Studio</a>
-          </li>
-          <li class="menu-item">
-            <a href="/pytalev.html" class="menu-link">Pytalev</a>
-          </li>
-          <li class="menu-item">
-            <a href="/school.html" class="menu-link">School</a>
-          </li>
-        </ul>
-        <div class="social-media">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
-      <!--@ End of Topbar @-->
-    <script src="script.js"></script>
-    <script>
-      function clickPytalevButton() {
-        window.scrollTo(pageXOffset, 0);
-        };
-        window.addEventListener('scroll', function() {
-          var studioPageButton = document.querySelector('.up');
-          if(pageYOffset > document.documentElement.clientHeight/2) {
-            studioPageButton.style.borderColor = '#ff7800';
-          } else {
-            studioPageButton.style.borderColor = 'white';
-          }
-      var front = document.querySelector('.front');
-      var back = document.querySelector('.back');
-      var right = document.querySelector('.right');
-      var left = document.querySelector('.left');
-      var top = document.querySelector('.top');
-      var bottom = document.querySelector('.bottom');
-      var logoWhite = document.querySelector('#white-logo');
-      var logoOrange = document.querySelector('#orange-logo')
-      var navbar = document.querySelector('.navbar');
-      var coordsNavbar = navbar.getBoundingClientRect();
-      var coordsLogo = logoWhite.getBoundingClientRect();
-
-      if(coordsLogo.bottom >= coordsNavbar.bottom) {
-        front.style.borderColor = '#ff7800';
-        back.style.borderColor = '#ff7800';
-        right.style.borderColor = '#ff7800';
-        left.style.borderColor = '#ff7800';
-        top.style.borderColor = '#ff7800';
-        bottom.style.borderColor = '#ff7800';
-        logoWhite.style.visibility = 'hidden';
-        logoOrange.hidden = false;
-        } else {
-          front.style.borderColor = 'white';
-          back.style.borderColor = 'white';
-          right.style.borderColor = 'white';
-          left.style.borderColor = 'white';
-          top.style.borderColor = 'white';
-          bottom.style.borderColor = 'white';
-          logoWhite.style.visibility = 'visible';
-          logoOrange.hidden = true;
-          }
-        });
-    </script>
+      </div>          
+    </main>
+    <div class="hamburger">
+      <div class="hamburger__line"></div>
+      <div class="hamburger__line"></div>
+      <div class="hamburger__line"></div>
+    </div>
+    <div class="hamburger-menu">
+      <ul class="hamburger-menu__list">
+        <li class="hamburger-menu__item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="hamburger-menu__item">
+          <a href="studio.html">Studio</a>
+        </li>
+        <li class="hamburger-menu__item">
+          <a href="pytalev.html">Pytalev</a>
+        </li>
+        <li class="hamburger-menu__item">
+          <a href="school.html">School</a>
+        </li>
+      </ul>    
+      <ul class="hamburger-menu__social-media-list">
+        <li class="hamburger-menu__social-media-item">
+          <a href="https://www.facebook.com/roman.pytalev">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li class="hamburger-menu__social-media-item">
+          <a href="https://www.instagram.com/roman.pytalev">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li class="hamburger-menu__social-media-item">
+          <a href="https://twitter.com/RPytalev">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>        
+      </ul>
+    </div>
     <script src="js/map.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0P3SKz8u9s5M3K3It8bVSFamJMEyoKXg&callback=initMap&libraries=&v=weekly"
       async>
     </script>
+    <script src="js/spinner.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

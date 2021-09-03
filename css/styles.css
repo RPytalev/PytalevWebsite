@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+::-webkit-scrollbar { 
+    width: 0px;
+}
+
 html {
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
     font-size: 62.5%;
-    overflow: scroll;
+    -ms-overflow-style: none; 
+    overflow-y: scroll;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 *,
@@ -13,6 +22,20 @@ html {
 
 a {
     text-decoration: none;
+}
+
+h1 {
+    color: #ff7800;
+}
+
+p {
+    color: #4c4c4c;
+}
+
+.copyright {
+    padding: 20px 0;
+    text-align: center;
+    color: #ff7800;
 }
 
 .header__wrapper {
@@ -31,91 +54,108 @@ a {
     align-items: center;
     width: 60px;
 	height: 60px;
+    padding: 0 50px;
     z-index: 555;
 }
 
-.logo-container {
-	width: 40px;
-	height: 40px;
+.logo__logo-container {
+	width: 50px;
+	height: 50px;
 	perspective: 150px;
 }
 
-.logo-cube {
-	width: inherit;
-	height: inherit;
-	transform-style: preserve-3d;
-    transform: rotateY(16deg);
+.logo-circle {
+    width: 50px;
+	height: 50px;
+    transform-style: preserve-3d;
 }
 
-.logo-cube__cube-side {
+.logo-circle__circle-line {
     position: absolute;
 	width: inherit;
 	height: inherit;
 	border: 1px solid white;
+    border-radius: 50%;
 }
 
-.logo-cube__cube-side-front {
-	transform: translateZ(20px);
+.logo-circle__circle-line-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo-cube__cube-side-back {
-	transform: rotateY(180deg) translateZ(20px);
+.logo-circle__circle-line-2 {
+    transform: rotateY(20deg)
 }
 
-.logo-cube__cube-side-right {
-	transform: rotateY(90deg) translateZ(20px);
+.logo-circle__circle-line-3 {
+    transform: rotateY(40deg)
 }
 
-.logo-cube__cube-side-left {
-	transform: rotateY(-90deg) translateZ(20px);
+.logo-circle__circle-line-4 {
+    transform: rotateY(60deg)
 }
 
-.logo-cube__cube-side-top {
-	transform: rotateX(90deg) translateZ(20px);
+.logo-circle__circle-line-5 {
+    transform: rotateY(80deg)
 }
 
-.logo-cube__cube-side-bottom {
-	transform: rotateX(-90deg) translateZ(20px);
+.logo-circle__circle-line-6 {
+    transform: rotateY(100deg)
 }
 
-#special {
-    transform-style: preserve-3d;
+.logo-circle__circle-line-7 {
+    transform: rotateY(120deg)
 }
 
-.cube-side-front__img-logo {
-    position: absolute;
+.logo-circle__circle-line-8 {
+    transform: rotateY(140deg)
+}
+
+.logo-circle__circle-line-9 {
+    transform: rotateY(160deg)
+}
+
+.logo-circle__circle-line-10 {
+    transform: rotateY(180deg)
+}
+
+.logo-circle__img {
     width: 40px;
     height: 40px;
     background-size: cover;
     background-repeat: no-repeat;
     vertical-align: middle;
-    transform: translateZ(-20px);
 }
 
-.logo-cube:hover {
-    animation: rotate 2s infinite ease-in-out;
+.logo-circle:hover {
+    animation: rotate 8s infinite ease-in-out;
 }
 
 @keyframes rotate {
     0% {
-      transform: rotateY(16deg);
+      transform: rotateY(0deg);
     }
     50% {
         transform: rotateY(360deg);
     }
     100% {
-      transform: rotateY(16deg);
+      transform: rotateY(0deg);
     }
   }
 
 .menu__list {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
     align-items: center;
     width: 300px;
     height: 60px;
 }
 
 .menu__item {
+    display: flex;
+    width: auto;
     margin-left: 30px;
     padding: 4px 0;
     border: 1px solid transparent;
@@ -127,7 +167,6 @@ a {
 
 .menu__item:hover {
     border-bottom: 1px solid white;
-
 }
 
 .main-wrapper {
@@ -163,41 +202,41 @@ a {
 
 .slider__button {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: white;
     cursor: pointer;
 }
   
 .slider__button-prev {
-    left: 5%;
+    left: 2%;
     top: 48%;
 }
   
 .slider__button-next {
-    right: 5%;
+    right: 2%;
     top: 48%;
 }
 
 .slider__button-marker {
     display: flex;
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-top: 1px solid #ff7800;
     border-right: 1px solid #ff7800;
 } 
 
 .slider__button-marker-arrow-left {
-    top: 5px;
-    left: 7px;
+    top: 12px;
+    left: 16px;
     transform: rotate(-135deg);
 }
 
 .slider__button-marker-arrow-right {
-    top: 5px;
-    left: 3px;
+    top: 12px;
+    left: 10px;
     transform: rotate(45deg);
 }
   
@@ -215,17 +254,17 @@ a {
     flex-flow: row nowrap;
     justify-items: center;
     align-items: center;
-    width: 100px;
+    width: auto;
     height: 2vh;
 }
   
 .slider-console__slide-indicator {
-    width: 10px;
-    height: 10px;
-    margin: 5px;
+    width: 8px;
+    height: 8px;
+    margin: 4px;
     border-radius: 50%;
     background-color: lightgray;
-    transition: 1.2s ease-in-out;
+    transition: .6s ease-in-out;
 }
   
 .slider-console__slide-indicator_highlighted {
@@ -350,7 +389,6 @@ a {
 .fab {
     width: 20px;
     height: 20px;
-    /* font-size: 1.5rem; */
     color: white;
 }
 
@@ -361,160 +399,207 @@ a {
 /*--@ End of Home page @--*/
 
 /*--@ Studio page @--*/
-/* .studio-page-content {
+.main-wrapper-studio-page {
     display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 100%;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
 }
 
-.studio-page-content .navbar-logo {
-    position: fixed;
-}
-
-#studioPageLogoInside img {
-    position: absolute;
-}
-
-.project {
-    position: relative;
-    width: 80vw;
-    height: 90vh;
-    background-color: #d3d3d3;
-    margin: 1rem;
-    overflow: scroll;
-}
-
-.project-content-wrapper {
-    position: relative;
-    width: 100%;
-    height: 200vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.welcome img {
-    position: relative;
-    width: 100%;
-    height: 50rem;
-    object-fit: contain;
-}
-
-.studio-button-wrapper {
+.buttonUp-wrapper {
     display: flex;
     position: fixed;
-    bottom: 20px;
-    right: 5rem;
-    width: 20px;
-    height: 20px;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    margin: 50px;
     border-radius: 50%;
     cursor: pointer;
+    border: 1px solid #ff7800;
+    z-index: 555;
 }
 
-.studio-button {
+.buttonUp-marker-arrow-up {
     display: flex;
     position: absolute;
-    width: 1rem;
-    height: 1rem;
-    border-top: .1rem solid white;
-    border-right: .1rem solid white;
+    top: 15px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid #ff7800;
+    border-right: 1px solid #ff7800;
+    transform: rotate(-45deg); 
 } 
 
-.up {
-    top: .7rem;
-    left: .5rem;
-    transform: rotate(-45deg); 
-} */
+.projects {
+    display: flex;
+    flex-flow: row wrap;
+    width: inherit;
+    height: inherit;
+}
+
+.projects__project {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw / 6);
+    height: calc(100vw / 3);
+    border: 1px solid lightgrey;
+}
+
+.project-content {
+    display: flex;
+    width: 100%;
+    height: calc(100% / 2);
+    border: 1px solid lightgrey;
+}
+
+.projects__project-second {
+    flex-basis: 33.3%;
+}
+
+.projects__project-ninth {
+    flex-basis: 33.3%;
+}
+
+.projects__project-thirteenth {
+    flex-basis: 33.3%;
+}
 /*--@ End of Studio page @--*/
 
 /*--@ Pytalev page  @--*/
-/* .pytalev-page-content {
+.main-wrapper-pytalev-page {
     display: flex;
     flex-flow: column wrap;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
 }
 
-.pytalev-page-content .navbar-logo {
-    position: fixed;
-}
-
-#pytalevPageLogoInside img {
-    position: absolute;
-}
-
-.pytalev-page-content h1 {
-    width: 100%;
-    font-size: 3rem;
-    color: #ff7800;
+.note {
+    display: flex;
+    flex-flow: column wrap;
     text-align: center;
-    padding-top: 4rem;
+    width: 65vw;
+    margin: 20px 0;
 }
 
-.cv {
-    width: 50%;
-    font-size: 20px;
-    color: #525252;
-    text-align: justify;
-    padding: 20px;
+.note > h1 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    padding: 10px;
 }
 
-.pytalev-page-content .img-wrapper {
-    width: 40rem;
-    height: 50rem;
-    background-color: gray;
+.wave {
+    animation: wave .1s .3s 3;
 }
 
-.pytalev-page-content .img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@keyframes wave {
+    0% {
+        transform: rotateZ(2deg);
+    }
+    100% {
+        transform: rotateZ(-2deg);
+    }
+}
+
+.note > p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 10px;
+} 
+
+.blinker {
+    animation: blinker .5s 3.5s 3;
+}
+
+@keyframes blinker {
+    0% {
+        color: #ff7800;
+    }
+    100% {
+        color: white;
+    }
 }
 
 .contact {
-    font-size: 1.8rem;
-    color: #525252;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.contact > a {
-    color: #525252;
+.contact__address {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    width: 250px;
+    margin: 0 30px;
 }
 
-.contact > a:hover {
+.contact__address > p {
+    padding: 2px 0;
+}
+
+.contact__img-wrapper {
+    width: 250px;
+    height: 350px;
+    margin: 20px 0;
+}
+
+.contact__img-wrapper > img {
+    filter: grayscale(100%);
+}
+
+.contact__img-wrapper > img:hover {
+    filter: none;
+}
+
+.contact__email-addresses {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 0 30px;
+}
+
+.contact__email-addresses > p {
+    align-self: flex-start;
+    padding-top: 10px;
+    padding-bottom: 2px;
+}
+
+.tremor:hover {
+    animation: tremor .1s ease-in-out;
+}
+
+@keyframes tremor {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.contact__email-addresses > a {
+    color: #4c4c4c;
+}
+
+.contact__email-addresses > a:hover {
+    align-self: center;
     color: #ff7800;
     text-decoration: underline;
-}
-
-#fullName {
-    padding-top: 20px;
-}
-
-#phone {
-    padding: 20px;
-}
-
-#generalRequest,
-#CollaborationRequest,
-#TrainingRequest {
-    width: 100%;
-    text-align: left;
-    margin-left: 85%;
-    padding-top: 1rem;
-    font-size: 1.20px;
-}
-
-.pytalev-page-content iframe {
-    width: 80vw;
-    height: 10rem;
-    padding: 20px;
+    transform: translateX(25px);
+    transition: .2s ease-in-out;
 }
 
 #map {
-    height: 14rem;
-    width: 50%;
-    margin: 20px;
+    width: 250px;
+    height: 150px;
 }
 
 .bounce {
@@ -528,55 +613,120 @@ a {
     100% {
         transform: translateY(0);
     }
-  }
-
-.pytalev-button-wrapper {
+}
+/*--@ End of Pytalev page @--*/
+.main-wrapper-school-page {
     display: flex;
-    position: fixed;
-    bottom: 20px;
-    right: 5rem;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
+    flex-flow: column wrap;
 }
 
-.pytalev-button {
-    display: flex;
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    border-top: .1rem solid white;
-    border-right: .1rem solid white;
-} 
-
-.up {
-    top: .7rem;
-    left: .5rem;
-    transform: rotate(-45deg); 
-} */
-/*--@ End of Pytalev page @--*/
 
 /*--@ School page @--*/
-/* .school-page-content {
+.main-wrapper-school-page {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
 }
 
-.school-page-content .navbar-logo {
-    position: fixed;
+.timer {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
 }
 
-.school-header {
-    padding: 30rem;
-    font-size: 20px;
+.timer > p {
+    padding: 10px 0;
+}
+
+.timer-wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: #ff7800;
+    color: white;
+    font-size: 1rem;
+    box-shadow: inset 0 -3px 8px rgba(0,0,0,.6), inset 0 3px 8px rgba(255, 255, 255, 0.7), 0 3px 8px -3px rgba(0,0,0,.8);
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 25px;
+    background-color: white;
+    color: #4c4c4c;
+    box-shadow: inset 2px 2px 1px rgba(154, 147, 140, 0.5), 1px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.timer-wrapper > p {
+    font-size: 1rem;
+    padding: 6px;
+    color: white;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 200px;
+    margin-top: 40px;
+    margin-bottom: 100px;
     text-align: center;
-    color: #525252;
-} */
+    background-color: lightgrey;
+    color: #4c4c4c;
+    border-radius: 10px;
+    background: rgb(200, 200, 200) radial-gradient(circle at 50% 0, rgba(255,255,255,.65), rgba(255,255,255,.35));
+    box-shadow: inset 0 -3px 8px rgba(0,0,0,.6), inset 0 3px 8px rgba(200, 200, 200, 0.7), 0 3px 8px -3px rgba(0,0,0,.8);
+}
+
+.subscribe-form > p {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.form {
+    display: flex;
+    flex-flow: column;
+    perspective: 100px;
+}
+
+.form > input {
+    width: 250px;
+    height: 40px;
+    margin: 10px 0;
+    text-align: center;
+    border-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.subscribe-form__form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 40px;
+    background-color: #ff7800;
+    color: white;
+    font-size: 1rem;
+    border-color: rgb(223, 223, 223);
+    border-radius: 5px;
+    box-shadow: inset rgba(0,0,0,.6) 0 -3px 8px, inset rgba(255, 255, 255, 0.7) 0 3px 8px, rgba(0,0,0,.8) 0 3px 8px -3px;
+    cursor: pointer;
+}
+
+
+
 /*--@ End of School page @--*/
 
 /*--@ Responsive @--*/
@@ -657,5 +807,13 @@ a {
     .slider-console__slide-description {
         font-size: 1rem;
     }
+
+    .buttonUp-wrapper {
+        bottom: 0;
+        right: calc(100vw / 2 - 20px);
+        width: 40px;
+        height: 40px;
+    }
+    
 }
 /*--@ End of Responsive @--*/

@@ -37,36 +37,28 @@ function mouseleaveButtonNext() {
   buttonNext.style.borderColor = '#ff7800';
 }
 
-// function mouseenterStudioButtonUp() {
-//   var studioButtonUpWrapper = document.querySelector('.studio-button-wrapper');
-//   var studioButtonUp = document.querySelector('.up');
-//   studioButtonUpWrapper.style.backgroundColor = '#ff7800';
-//   studioButtonUp.style.borderColor = 'white';
-// }
-      
-// function mouseleaveStudioButtonUp() {
-//   var studioButtonUpWrapper = document.querySelector('.studio-button-wrapper');
-//   var studioButtonUp = document.querySelector('.up');
-//   studioButtonUpWrapper.style.backgroundColor = 'white';
-//   studioButtonUp.style.borderColor = '#ff7800';
-//   if(pageYOffset < document.documentElement.clientHeight/2) {
-//     studioButtonUp.style.borderColor = 'white';
-//   }
-// }
+function clickButtonUp() {
+  window.scrollTo(scrollY, 0);
+}
 
-// function mouseenterPytalevButtonUp() {
-//   var pytalevButtonUpWrapper = document.querySelector('.pytalev-button-wrapper');
-//   var pytalevButtonUp = document.querySelector('.up');
-//   pytalevButtonUpWrapper.style.backgroundColor = '#ff7800';
-//   pytalevButtonUp.style.borderColor = 'white';
-// }
-      
-// function mouseleavePytalevButtonUp() {
-//   var pytalevButtonUpWrapper = document.querySelector('.pytalev-button-wrapper');
-//   var pytalevButtonUp = document.querySelector('.up');
-//   pytalevButtonUpWrapper.style.backgroundColor = 'white';
-//   pytalevButtonUp.style.borderColor = '#ff7800';
-//   if(pageYOffset < document.documentElement.clientHeight/2) {
-//     pytalevButtonUp.style.borderColor = 'white';
-//   }
-// }
+function mouseenterButtonUp() {
+  var buttonUpWrapper = document.querySelector('.buttonUp-wrapper');
+  var arrowUp = document.querySelector('.buttonUp-marker-arrow-up');
+
+    buttonUpWrapper.style.backgroundColor = '#ff7800';
+    arrowUp.style.borderColor = 'white';
+}
+
+function mouseleaveButtonUp() {
+  var buttonUpWrapper = document.querySelector('.buttonUp-wrapper');
+  var arrowUp = document.querySelector('.buttonUp-marker-arrow-up');
+  
+    buttonUpWrapper.style.backgroundColor = 'transparent';
+    buttonUpWrapper.style.borderColor = '#ff7800';
+    arrowUp.style.borderColor = '#ff7800';
+}
+
+function offsetButtonSubscribeForm() {
+  var buttonSubscribeForm = document.querySelector('.subscribe-form__form-button');
+  buttonSubscribeForm.style.transform = 'translateZ(-2px)';
+}
