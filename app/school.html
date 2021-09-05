@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pytalev's web studio & school HTML, CSS, JavaScript</title>
+    <title>School|Pytalev's web studio & school HTML, CSS, JavaScript</title>
     <meta name="author" content="Roman Pytalev">
     <meta name="Copyright" content="Roman Pytalev">
     <meta name="description" content="Pytalev's web studio and school is always open to web developers. This is where the code lives. HTML, CSS, JavaScript">
@@ -21,7 +21,7 @@
             <div class="logo__logo-container">
               <div class="logo-circle">
                 <div class="logo-circle__circle-line logo-circle__circle-line-1">
-                    <img id="img-logo-color-white" class="logo-circle__img" src="images/logo-white.png" alt="Logo white color">
+                    <img id="img-logo-color-white" class="logo-circle__img" src="img/logo-white.png" alt="Logo white color">
                 </div>
                 <div class="logo-circle__circle-line logo-circle__circle-line-2"></div>
                 <div class="logo-circle__circle-line logo-circle__circle-line-3"></div>
@@ -52,48 +52,37 @@
       </div>
     </header>
     <main class="main">
-      <div class="main-wrapper">
-        <div class="slider">
-          <div class="slider__slider-roll">
-            <div class="slider-roll__slide">
-              <div class="slide__slide-content">First</div>
-            </div>
-            <div class="slider-roll__slide">
-              <div class="slide__slide-content">Second</div>
-            </div>
-            <div class="slider-roll__slide">
-              <div class="slide__slide-content">Third</div>
-            </div>
-            <div class="slider-roll__slide">
-              <div class="slide__slide-content">Fourth</div>
-            </div>
-            <div class="slider-roll__slide">
-              <div class="slide__slide-content">Fifth</div>
-            </div>
+      <div class="main-wrapper-school-page">
+        <section class="note">
+          <h1 class="wave">Coming soon</h1>
+          <p>We are currently working on a school page. Stay tuned!</p>
+          <p class="blinker">Time left until launching:</p>
+        </section>
+        <section class="timer">
+          <div class="timer-wrapper timer-wrapper__days">
+            <div class="display display-days">365</div>
+            <p>days</p>
           </div>
-        </div>
-        <a class="slider__button slider__button-prev" role="button" onmouseenter="mouseenterButtonPrev()" onmouseleave="mouseleaveButtonPrev()">
-          <div class="slider__button-marker slider__button-marker-arrow-left"></div>
-        </a>
-        <a class="slider__button slider__button-next" role="button" onmouseenter="mouseenterButtonNext()" onmouseleave="mouseleaveButtonNext()">
-          <div class="slider__button-marker slider__button-marker-arrow-right"></div>
-        </a>
-        <div class="slider-console">
-          <div class="slider-console__slides-indicators">
-            <div class="slider-console__slide-indicator slider-console__slide-indicator_highlighted"></div>
-            <div class="slider-console__slide-indicator"></div>
-            <div class="slider-console__slide-indicator"></div>
-            <div class="slider-console__slide-indicator"></div>
-            <div class="slider-console__slide-indicator"></div>
+          <div class="timer-wrapper timer-wrapper__haurs">
+            <div class="display display-haurs">21</div>
+            <p>haurs</p>
           </div>
-          <div class="slider-console__slides-descriptions">
-            <p class="slider-console__slide-description slider-console__slide-description_visible">First</p>
-            <p class="slider-console__slide-description">Second</p>
-            <p class="slider-console__slide-description">Third</p>
-            <p class="slider-console__slide-description">Fourth</p>
-            <p class="slider-console__slide-description">Fifth</p>
+          <div class="timer-wrapper timer-wrapper__minutes">
+            <div class="display display-minutess">5</div>
+            <p>minutes</p>
           </div>
-        </div>
+          <div class="timer-wrapper timer-wrapper__seconds">
+            <div class="display display-seconds">5</div>
+            <p>seconds</p>
+          </div>
+        </section>
+        <section class="subscribe-form">
+          <p>Subscribe to get notified!</p>
+          <form class="form">
+            <input type="email" placeholder="Your email address">
+            <div class="subscribe-form__form-button" role="button" onclick="offsetButtonSubscribeForm()">Subscribe</div>
+          </form>
+        </section>
       </div>          
     </main>
     <div class="hamburger">
@@ -134,8 +123,8 @@
         </li>        
       </ul>
     </div>
+    <p class="copyright">&copy 2021  Pytalev</p>
     <script src="js/spinner.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/slider.js"></script>
   </body>
 </html>
