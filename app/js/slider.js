@@ -1,13 +1,13 @@
 'use strict';
 function sliderBeginnerLevelWithIndicatorsAndDescriptions() {
 
-  var sliderRoll = document.querySelector('.slider__slider-roll'); 
-  var sliderSlides = document.querySelectorAll('.slider-roll__slide');
-  var sliderSlide = document.querySelector('.slider-roll__slide');
-  var sliderButtonPrev = document.querySelector('.slider__button-prev');
-  var sliderButtonNext = document.querySelector('.slider__button-next');
-  var sliderIndicators = document.querySelectorAll('.slider-console__slide-indicator');
-  var sliderDescriptions = document.querySelectorAll('.slider-console__slide-description');
+  var sliderRoll = document.querySelector('.main__slider-roll'); 
+  var sliderSlides = document.querySelectorAll('.main__slide');
+  var sliderSlide = document.querySelector('.main__slide');
+  var sliderButtonPrev = document.querySelector('.main__slider-button-prev');
+  var sliderButtonNext = document.querySelector('.main__slider-button-next');
+  var sliderIndicators = document.querySelectorAll('.main__slide-indicator');
+  var sliderDescriptions = document.querySelectorAll('.main__slide-description');
   var slideWidth = parseFloat(getComputedStyle(sliderSlide).width);
   var offsetLength = slideWidth;
   var counter = 0;
@@ -16,12 +16,12 @@ function sliderBeginnerLevelWithIndicatorsAndDescriptions() {
 
     function offsetPrev() {
       if(counter == 0) return;
-      sliderIndicators[counter].classList.remove('slider-console__slide-indicator_highlighted');
-      sliderDescriptions[counter].classList.remove('slider-console__slide-description_visible');
+      sliderIndicators[counter].classList.remove('main__slide-indicator_highlighted');
+      sliderDescriptions[counter].classList.remove('main__slide-description_visible');
 
       counter--;
-      sliderIndicators[counter].classList.add('slider-console__slide-indicator_highlighted');
-      sliderDescriptions[counter].classList.add('slider-console__slide-description_visible');
+      sliderIndicators[counter].classList.add('main__slide-indicator_highlighted');
+      sliderDescriptions[counter].classList.add('main__slide-description_visible');
       sliderRoll.style.transform = "translateX(" + -offsetLength*counter + "px)";
     }
 
@@ -29,12 +29,12 @@ function sliderBeginnerLevelWithIndicatorsAndDescriptions() {
 
     function offsetNext() {
       if(counter == sliderSlides.length - 1) return;
-      sliderIndicators[counter].classList.remove('slider-console__slide-indicator_highlighted');
-      sliderDescriptions[counter].classList.remove('slider-console__slide-description_visible');
+      sliderIndicators[counter].classList.remove('main__slide-indicator_highlighted');
+      sliderDescriptions[counter].classList.remove('main__slide-description_visible');
       counter++;
       sliderRoll.style.transform = "translateX(" + -offsetLength*counter + "px)";
-      sliderIndicators[counter].classList.add('slider-console__slide-indicator_highlighted');
-      sliderDescriptions[counter].classList.add('slider-console__slide-description_visible');
+      sliderIndicators[counter].classList.add('main__slide-indicator_highlighted');
+      sliderDescriptions[counter].classList.add('main__slide-description_visible');
     }
 }
 sliderBeginnerLevelWithIndicatorsAndDescriptions();

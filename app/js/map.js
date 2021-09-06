@@ -15,7 +15,7 @@ function initMap() {
         map: map,
         animation: google.maps.Animation.BOUNCE,
         icon: {
-            url: 'images/logo-orange.png',
+            url: 'img/logo-orange.png',
             scaledSize: new google.maps.Size(50, 50),
         }
         
