@@ -1,13 +1,24 @@
 'use strict'
+window.onload = function () {
+  var spinner = document.querySelector('.spinner__container');
+  spinner.style.visibility = 'visible';
+  document.body.classList.add('hide');
+  window.setTimeout(function () {
+    spinner.style.visibility = 'hidden';
+    document.body.classList.add('show');
+    document.body.classList.remove('hide');
+  }, 1000);
+};
+
 window.addEventListener('scroll', function() {
   document.querySelector('.hamburger').style.position = 'absolute';
     var buttonUp = document.querySelector('.main__buttonUp');
     var scrolled = window.pageYOffset;
     var height = document.documentElement.clientHeight;
-    if (scrolled > height / 5) {
+    if (scrolled > height / 4) {
       buttonUp.classList.add('showButtonUp');
     }
-    if (scrolled < height / 5) {
+    if (scrolled < height / 4) {
       buttonUp.classList.remove('showButtonUp');
     }
 });
@@ -48,7 +59,6 @@ function mouseleaveButtonNext() {
 function mouseenterButtonUp() {
   var buttonUp = document.querySelector('.main__buttonUp');
   var buttonMarkerArrowUp = document.querySelector('.main__button-marker-arrow-up');
-
     buttonUp.style.backgroundColor = '#ff7800';
     buttonMarkerArrowUp.style.borderColor = 'white';
 }
@@ -56,7 +66,6 @@ function mouseenterButtonUp() {
 function mouseleaveButtonUp() {
   var buttonUp = document.querySelector('.main__buttonUp');
   var buttonMarkerArrowUp = document.querySelector('.main__button-marker-arrow-up');
-  
     buttonUp.style.backgroundColor = 'transparent';
     buttonUp.style.borderColor = '#ff7800';
     buttonMarkerArrowUp.style.borderColor = '#ff7800';
