@@ -17,11 +17,11 @@ function sliderBeginnerLevelWithIndicatorsAndDescriptions() {
     function offsetPrev() {
       if(counter == 0) return;
       sliderIndicators[counter].classList.remove('main__slide-indicator_highlighted');
-      sliderDescriptions[counter].classList.remove('main__slide-description_visible');
+      sliderDescriptions[counter].classList.remove('main__slide-description_offset');
 
       counter--;
       sliderIndicators[counter].classList.add('main__slide-indicator_highlighted');
-      sliderDescriptions[counter].classList.add('main__slide-description_visible');
+      sliderDescriptions[counter].classList.add('main__slide-description_offset');
       sliderRoll.style.transform = "translateX(" + -offsetLength*counter + "px)";
     }
 
@@ -30,11 +30,11 @@ function sliderBeginnerLevelWithIndicatorsAndDescriptions() {
     function offsetNext() {
       if(counter == sliderSlides.length - 1) return;
       sliderIndicators[counter].classList.remove('main__slide-indicator_highlighted');
-      sliderDescriptions[counter].classList.remove('main__slide-description_visible');
+      sliderDescriptions[counter].classList.remove('main__slide-description_offset');
       counter++;
       sliderRoll.style.transform = "translateX(" + -offsetLength*counter + "px)";
       sliderIndicators[counter].classList.add('main__slide-indicator_highlighted');
-      sliderDescriptions[counter].classList.add('main__slide-description_visible');
+      sliderDescriptions[counter].classList.add('main__slide-description_offset');
     }
 }
 sliderBeginnerLevelWithIndicatorsAndDescriptions();

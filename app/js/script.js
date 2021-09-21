@@ -1,6 +1,6 @@
 'use strict'
 window.onload = function () {
-  var spinner = document.querySelector('.spinner__container');
+  var spinner = document.querySelector('.spinner');
   spinner.style.visibility = 'visible';
   document.body.classList.add('hide');
   window.setTimeout(function () {
@@ -24,8 +24,7 @@ window.addEventListener('scroll', function() {
 });
 
 document.querySelector('.hamburger').addEventListener('click', function() {
-  document.querySelector('.hamburger-menu').classList.toggle('firstChange');
-  document.querySelector('.hamburger-menu__list').classList.toggle('secondChange');
+  document.querySelector('.hamburger-menu').classList.toggle('offsetHamburgerMenu');
 });
 
 function mouseenterButtonPrev() {
@@ -69,9 +68,4 @@ function mouseleaveButtonUp() {
     buttonUp.style.backgroundColor = 'transparent';
     buttonUp.style.borderColor = '#ff7800';
     buttonMarkerArrowUp.style.borderColor = '#ff7800';
-}
-
-function offsetButtonSubscribeForm() {
-  var buttonSubscribeForm = document.querySelector('.main__subscribe-form-button');
-  buttonSubscribeForm.style.transform = 'translateZ(-2px)';
 }
