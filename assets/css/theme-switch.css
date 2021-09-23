@@ -1,0 +1,117 @@
+.header__theme-switch-bottom-surf {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 2.4rem;
+  height: 4.4rem;
+  border-radius: 4rem;
+  box-shadow: inset .1rem .1rem .1rem .1rem rgba(0, 0, 0, .15),
+              inset -.1rem -.1rem .1rem .1rem rgba(255, 255, 255, .5);
+}
+
+.header__theme-switch-top-surf {
+  position: absolute;
+  bottom: .5rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-image: linear-gradient(139.95deg, #f3f3f3 16.4%, #CBCBCB 83.04%);
+  box-shadow: 6px 6px 15px #D6D6D6, -6px -6px 15px #eeeeee;
+  cursor: pointer;
+  }
+
+.header__theme-switch-icon-moon {
+  margin-top: .1rem;
+  margin-left: .1rem;
+  transform: scale(.6);
+}
+
+.header__theme-switch-icon-moon-part-large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: .1rem;
+  border-radius: 50%;
+  background-color: #7c7c7c;
+}
+
+.header__theme-switch-icon-moon-part-small {
+  position: relative;
+  left: .4rem;
+  top: -.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: rgba(221, 221, 221);
+}
+
+.header__theme-switch-icon-sun {
+  justify-self: center;
+  align-items: center;
+  padding: .6rem;
+  transform: scale(.4);
+ }
+ 
+.header__theme-switch-icon-sun-circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: #7c7c7c;
+}
+
+.header__theme-switch-icon-sun-ray {
+  position: absolute;
+  width: .2rem;
+  height: .4rem;
+  background-color: #7c7c7c;
+}
+
+.header__theme-switch-icon-sun-circle div:nth-child(1){
+  transform: rotate(0deg) translate(0, -1rem);  
+}
+
+.header__theme-switch-icon-sun-circle div:nth-child(2){
+  transform: rotate(45deg) translate(0, -1rem);
+}
+
+.header__theme-switch-icon-sun-circle div:nth-child(3){
+  transform: rotate(90deg) translate(0, -1rem);
+}
+
+.header__theme-switch-icon-sun-circle div:nth-child(4){
+  transform: rotate(135deg) translate(0, -1rem);
+}
+
+.header__theme-switch-icon-sun-circle div:nth-child(5){
+  transform: rotate(180deg) translate(0, -1rem);
+}
+
+.header__theme-switch-icon-sun-circle div:nth-child(6){
+  transform: rotate(225deg) translate(0, -1rem);
+}
+
+.header__theme-switch-icon-sun-circle div:nth-child(7){
+  transform: rotate(270deg) translate(0, -1rem);
+}
+
+.header__theme-switch-icon-sun-circle div:nth-child(8){
+  transform: rotate(315deg) translate(0, -1rem);
+}
+
+.onLight-theme {
+  transform: translateY(1.9rem);
+}
+
+.onDark-theme {
+  transform: translateY(-1.9rem);
+}
