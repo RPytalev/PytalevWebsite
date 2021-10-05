@@ -1,0 +1,70 @@
+.sectionFourthStage {
+    @extend %section-row;
+
+    #and {
+        position: absolute;
+        left: 5%;
+        top: 0;
+    } 
+
+    #some {
+        position: absolute;
+        left: 15%;
+        top: 16%;
+        opacity: 0;
+        transition: 1s ease;
+    } 
+
+    #design {
+        position: absolute;
+        left: 5%;
+        top: 24%;
+        transition: 1s ease;
+    } 
+
+    #spaceman-2 {
+        @extend %spaceman;
+        top: 24%;
+        left: 60%;
+    }
+
+    #planet-figma {
+        @extend %planet;
+        top: 4.5%;
+        right: -18.6%;
+    }
+
+    #ring-three {
+        @extend %ring;
+        top: 10%;
+        left: 45.5%;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+
+        #planet-figma {
+            top: 4%;
+            right: -20%;
+        }
+    }
+
+    @media (min-width: 479px) and (max-width: 768px) {
+
+        #planet-figma {
+            top: 3%;
+            right: -20%;
+        }
+    }
+
+    @media (max-width: 478px) {
+
+        #some {
+            top: 8%;
+        } 
+
+        #planet-figma {
+            top: 2%;
+            right: -20%;
+        }
+    }
+}

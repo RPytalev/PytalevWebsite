@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width initial-scale=1.0")
+        meta(name="author" content="Roman Pytalev")
+        meta(name="Copyright" content="Roman Pytalev")
+        meta(name="description" content="Pytalev's web studio and school is always open to web developers. Let's get party started. HTML, CSS and of course JavaScript naturally is here")
+        link(rel="shortcut icon" type="image/png" href="favicon.png")
+        link(rel="stylesheet", href="src/css/styles.css")
+        title Studio | pytalev.com
+    body
+        .container
+            include ./header.pug
+            .sectionStudio 
+                img#stars-3(src="src/img/stars-3.svg" alt="Stars image" width="1px" hight="1px")
+                h1 My projects
+                include ./projects
+                a.button-up-3(href="#top" role='button') 
+                    img.button-up-orange-3(src="src/img/button-up-orange-3.svg" alt="Circle orange button with marker arrow up image")
+                    img.button-up-white-3(src="src/img/button-up-white-3.svg" alt="Circle white button with marker arrow up image")
+                include ./footer.pug
+    script(src="src/js/script-studio.js") 

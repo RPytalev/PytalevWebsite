@@ -1,0 +1,9 @@
+header
+    a.logo(href='index.html' role='button')
+        .img-wrapper
+            img#logo-white(src="src/img/logo-white.svg" alt="Logo white uppercase letter R image")
+            img#logo-orange(src="src/img/logo-orange.svg" alt="Logo orange uppercase letter R image")
+    ul
+        each name in ['studio', 'school', 'about']
+                li
+                    a(id=name href=name + '.html' role='button')= name

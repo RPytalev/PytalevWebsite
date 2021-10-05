@@ -1,0 +1,49 @@
+header {
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    width: inherit;
+    height: 10vh;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        padding: 0 4rem;
+        z-index: 3;
+        :hover {
+            color: #ff7800;
+        }
+    }
+
+    a {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+    .img-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #logo-white {
+        position: absolute;
+        width: 130%;
+        height: 130%;
+        z-index: 555;
+    }
+
+    #logo-orange {
+        position: absolute;
+        width: 130%;
+        height: 130%;
+        z-index: 555;
+        visibility: hidden;
+    }
+}

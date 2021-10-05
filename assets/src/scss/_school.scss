@@ -1,0 +1,259 @@
+.container {
+    @extend %media-queries;
+}
+
+.sectionSchool {
+    @extend %section-column;
+    background-image: url(/assets/src/img/stars-3.svg);
+
+    .note {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .word {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15rem;
+            height: 5.9rem;
+        }
+
+        .part-word {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #Coming {
+            position: absolute;
+            z-index: 3;
+        }
+
+        img {
+            margin-top: .1rem;
+        }
+
+        #soon {
+            position: absolute;
+            z-index: 3;
+        }
+
+        %word {
+            position: relative;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            transform: scale(.6);
+        }
+
+        #word-one {
+            @extend %word;
+            padding-top: 5%;
+
+            #coming-top {
+                align-items: flex-end;
+    
+                #coming-top-white {
+                    z-index: 4;
+                    animation: offset-left-1 .001s 500 linear alternate;
+                }
+    
+                #coming-top-magenta {
+                    z-index: 2;
+                    animation: offset-left-2 .001s 500 linear alternate;
+
+                }
+    
+                #coming-top-aqua {
+                    z-index: 1;
+                    animation: offset-left-3 .001s 500 linear alternate;
+
+                }
+
+                @keyframes offset-left-1 {
+                    0% {
+                        transform: translateX(-1rem);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+
+                @keyframes offset-left-2 {
+                    0% {
+                        transform: translateX(-1.2rem);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+
+                @keyframes offset-left-3 {
+                    0% {
+                        transform: translateX(-1.4rem);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+            }
+    
+            #coming-bottom {
+                align-items: flex-start;
+    
+                #coming-bottom-white {
+                    z-index: 4;
+                    animation: offset-right-1 .001s .001s 500 linear alternate;
+
+                }
+    
+                #coming-bottom-magenta {
+                    z-index: 2;
+                    animation: offset-right-2 .001s .002s 500 linear alternate;
+
+                }
+    
+                #coming-bottom-aqua {
+                    z-index: 1;
+                    animation: offset-right-3 .001s .003s 500 linear alternate;
+
+                }
+
+                @keyframes offset-right-1 {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(1rem);
+                    }
+                }
+
+                @keyframes offset-right-2 {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(1.2rem);
+                    }
+                }
+
+                @keyframes offset-right-3 {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(1.4rem);
+                    }
+                }
+            }
+        }
+
+        #word-two {
+            @extend %word;
+
+            #soon-top {
+                align-items: flex-start;
+    
+                #soon-top-white {
+                    z-index: 3;
+                    animation: offset-right-1 .001s 500 linear alternate;
+
+                }
+    
+                #soon-top-magenta {
+                    z-index: 2;
+                    animation: offset-right-2 .001s 500 linear alternate;
+
+                }
+    
+                #soon-top-aqua {
+                    z-index: 1;
+                    animation: offset-right-3 .001s 500 linear alternate;
+
+                }
+            }
+    
+            #soon-bottom {
+                align-items: flex-end;
+    
+                #soon-bottom-white {
+                    z-index: 3;
+                    animation: offset-left-1 .001s .001s 500 linear alternate;
+
+                }
+    
+                #soon-bottom-magenta {
+                    z-index: 2;
+                    animation: offset-left-2 .001s .001s 500 linear alternate;
+
+                }
+    
+                #soon-bottom-aqua {
+                    z-index: 1;
+                    animation: offset-left-3 .001s .001s 500 linear alternate;
+
+                }
+            }
+        }        
+    }
+
+    .timer {
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1%;
+    }
+
+    .timer-item {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1%;
+    }
+
+    .time {
+        width: 6rem;
+        padding: 0 1%;
+        font-size: 3rem;
+        font-weight: 500;
+        color: #ff7800;
+    }
+
+    .text {
+        padding: 0 1%;
+        align-self: baseline;
+        font-size: 1.6rem;
+        font-weight: 200;
+        color: #fff;
+    }
+
+    @media (max-width: 760px) {
+
+        .note {
+            transform: scale(.7);
+        }
+      }
+      
+      @media (max-width: 480px) {
+      
+        .note {
+            transform: scale(.5);
+        }
+      }
+      
+      @media (max-width: 320px) {
+      
+        .note {
+            transform: scale(.4);
+        }
+      }
+}
