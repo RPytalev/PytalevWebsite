@@ -43,22 +43,21 @@
         left: 45.5%;
     }
 
-    @media (min-width: 768px) and (max-width: 1024px) {
-
+    @media (min-width: 760px) and (max-width: 1199px) {
         #planet-olive {
             top: 4%;
             right: -20%;
         }
     }
+    
+    @media (min-width: 480px) and (max-width: 759px) {
 
-    @media (min-width: 480px) and (max-width: 767px) {
-        
         #planet-olive {
             top: 3%;
             right: -20%;
-        }
+        }        
     }
-
+    
     @media (max-width: 479px) {
 
         #i {

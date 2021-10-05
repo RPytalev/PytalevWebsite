@@ -4,6 +4,7 @@
 
 .sectionSchool {
     @extend %section-column;
+    height: 84vh;
     background-image: url(/assets/src/img/stars-3.svg);
 
     .note {
@@ -236,24 +237,19 @@
         color: #fff;
     }
 
-    @media (max-width: 760px) {
-
+    @media (min-width: 480px) and (max-width: 759px) {
         .note {
             transform: scale(.7);
         }
-      }
-      
-      @media (max-width: 480px) {
-      
+    }
+    @media (min-width: 320px) and (max-width: 479px) {
         .note {
             transform: scale(.5);
         }
-      }
-      
-      @media (max-width: 320px) {
-      
+    }
+    @media (max-width: 319px) {
         .note {
             transform: scale(.4);
         }
-      }
+    }
 }

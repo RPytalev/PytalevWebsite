@@ -149,7 +149,27 @@ p {
 
 %media-queries {
 
-  @media (max-width: 1024px) {
+  // @media (min-width: 1920px) {
+
+  // }
+  // @media (min-width: 1600px) and (max-width: 1919px) {
+
+  // }
+  // @media (min-width: 1200px) and (max-width: 1599px) {
+
+  // }
+  // @media (min-width: 960px) and (max-width: 1199px) {
+     
+  // }
+
+  @media (max-width: 959px) {
+    
+    header ul {
+      display: none;
+    }
+  }
+
+  @media (min-width: 760px) and (max-width: 959px) {
 
     h1 {
       font-size: 8rem;
@@ -158,20 +178,20 @@ p {
     h2 {
       font-size: 2.5rem;
     }
-  
-    header ul {
-      display: none;
-    }
 
     p {
       font-size: 1.5rem;
     } 
   }
-  
-  @media (max-width: 480px) {
-  
+
+  // @media (min-width: 480px) and (max-width: 759px) {
+      
+  // }
+
+  @media (min-width: 321px) and (max-width: 479px) {
+
     h1 {
-        font-size: 6rem;
+      font-size: 6rem;
     }
 
     h2 {
@@ -182,19 +202,19 @@ p {
       font-size: 1.5rem;
     } 
   }
-  
+
   @media (max-width: 320px) {
-  
+
     h1 {
-        font-size: 4rem;
+      font-size: 4rem;
     }
-  
+
     h2 {
       font-size: 2rem;
     }
-  
+
     p {
       font-size: 1rem;
-    } 
+    }
   }
 }
