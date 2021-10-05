@@ -67,27 +67,19 @@
         display: flex;
     }
 
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 760px) and (max-width: 1199px) {
 
         #planet-orange {
             top: -2%;
             left: 40.5%;
         }
     }
-
-    @media (min-width: 480px) and (max-width: 767px) {
-        
-        #planet-orange {
-            top: -4%;
-            left: 41%;
-        }
-    }
-
-    @media (max-width: 479px) {
+    
+    @media (min-width: 480px) and (max-width: 759px) {
 
         #planet-orange {
             top: -4%;
             left: 41%;
         }
-    }
+    }  
 }

@@ -40,22 +40,23 @@
         left: 45.5%;
     }
 
-    @media (min-width: 769px) and (max-width: 1024px) {
+    @media (min-width: 760px) and (max-width: 1199px) {
 
         #planet-figma {
             top: 4%;
             right: -20%;
         }
+       
     }
-
-    @media (min-width: 479px) and (max-width: 768px) {
+   
+    @media (min-width: 480px) and (max-width: 759px) {
 
         #planet-figma {
             top: 3%;
             right: -20%;
         }
     }
-
+    
     @media (max-width: 478px) {
 
         #some {
