@@ -1,0 +1,172 @@
+.sectionFifthStage {
+    @extend %section-row;
+
+    #contact {
+        position: absolute;
+        left: 105%;
+        top: -12%;
+        transition: 1s ease;
+    } 
+
+    #me {
+        position: absolute;
+        top: 63%;
+        left: -25%;
+        transition: 1s ease;
+    } 
+
+    %contactLink {
+        position: absolute;
+        font-size: 2rem;
+        font-weight: 300;
+        z-index: 555;
+    }
+
+    #collaboration {
+        top: 30%;
+        left: 8%;
+        @extend %contactLink; 
+    }
+
+    #training {
+        top: 65%;
+        left: 10%;
+        @extend %contactLink; 
+    }
+
+    #roman {
+        top: 21%;
+        left: 77%;
+        @extend %contactLink; 
+    }
+
+    #spaceman-3 {
+        position: absolute;
+        top: 34%;
+        left: 28.9%;
+        width: 45%;
+        height: 45%;
+        opacity: 0;
+        z-index: 3;
+        transition: 1s ease;
+    }
+
+    #planet-orange-2 {
+        @extend %planet;
+        top: 17%;
+        left: 15%;
+    }
+
+    #ring-four {
+        @extend %ring;
+        top: 22%;
+        left: 22%;
+    }
+
+    a p:hover {
+        color: #ff7800;
+    }
+
+    @media (min-width: 1025px) {
+
+        #contact {
+            top: -22%;
+        } 
+
+        #roman {
+            left: 70%;
+        }
+
+        #collaboration {
+            top: 24%;
+        }
+    
+        #training {
+            top: 72%;
+        }
+    }
+
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+
+        #me {
+            top: 68%;
+            left: -10%;
+        } 
+
+        #roman {
+            left: 67%;
+        }
+
+        #collaboration {
+            top: 24%;
+            left: 3%;
+        }
+    
+        #training {
+            top: 70%;
+            left: 5%;
+        }
+
+        #planet-orange-2 {
+            top: 15%;
+            left: 17%;
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 767px) {
+
+        #contact {
+            top: -6%;
+        } 
+
+        #roman {
+            left: 67%;
+        }
+
+        #collaboration {
+            top: 24%;
+            left: 2%;
+        }
+    
+        #training {
+            top: 70%;
+            left: 4%;
+        }
+
+        #planet-orange-2 {
+            top: 14%;
+            left: 16%;
+        }
+    }
+
+    @media (max-width: 479px) {
+
+        #contact {
+            top: -2%;
+        } 
+
+        #me {
+            top: 67%;
+        } 
+
+        #roman {
+            left: 60%;
+        }
+
+        #collaboration {
+            top: 24%;
+            left: 2%;
+        }
+    
+        #training {
+            top: 68%;
+            left: 4%;
+        }
+
+        #planet-orange-2 {
+            top: 13.5%;
+            left: 16%;
+        }
+    }
+}

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'spinner';
+@import 'header';
+@import 'footer';
+@import 'sectionFirstStage';
+@import 'sectionSecondStage';
+@import 'sectionThirdStage';
+@import 'sectionFourthStage';
+@import 'sectionFifthStage';
+@import 'studio';
+@import 'school';
+@import 'about';
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$main-color: #ff7800;
+$text-color: #fff;
+$background-color: #000;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: $background-color;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+ul li {
+  list-style: none;
+  color: $text-color;
+}
+
+h1 {
+  font-size: 15rem;
+  font-weight: 900;
+  color: $text-color;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $text-color;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: $text-color;
+}
+
+p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  color: $text-color;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+%stars {
+  position: relative;
+  top: -10%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+%section-row {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100vh;
+  background-color: $background-color;
+  margin: 0 -15px;
+}
+
+%section-column {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  background-color: $background-color;
+  background-size: contain;
+  text-align: center;
+  z-index: 1;
+}
+
+%spaceman {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  opacity: 0;
+  z-index: 3;
+}
+
+%planet {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  z-index: 2;
+  opacity: .3;
+  transition: 1s ease;
+}
+
+%ring {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  transition: 1s ease;
+  opacity: 0;
+  z-index: 2;
+}
+
+.sectionFourthTextBlock {
+  padding: 7% 0;
+}
+
+%media-queries {
+
+  @media (max-width: 1024px) {
+
+    h1 {
+      font-size: 8rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+  
+    header ul {
+      display: none;
+    }
+
+    p {
+      font-size: 1.5rem;
+    } 
+  }
+  
+  @media (max-width: 480px) {
+  
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    } 
+  }
+  
+  @media (max-width: 320px) {
+  
+    h1 {
+        font-size: 4rem;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    } 
+  }
+}

@@ -1,0 +1,81 @@
+.sectionSecondStage {
+    @extend %section-row;
+
+    #i {
+        position: absolute;
+        top: -10%;
+        left: 0;
+        opacity: 0;
+    } 
+
+    #am {
+        position: absolute;
+        left: 0;
+        top: 5%;
+        transform: rotate(90deg);
+        opacity: 0;
+    } 
+
+    #web {
+        position: absolute;
+        left: 7%;
+        top: 46%;
+        opacity: 0;
+    } 
+
+    #developer {
+        position: absolute;
+        left: 15%;
+        top: 62%;
+        transform: rotateX(180deg);
+        opacity: 0;
+    } 
+    
+    #planet-olive {
+        @extend %planet;
+        top: 4.5%;
+        right: -18.5%;
+    }
+
+    #ring-two {
+        @extend %ring;
+        top: 10%;
+        left: 45.5%;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+
+        #planet-olive {
+            top: 4%;
+            right: -20%;
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 767px) {
+        
+        #planet-olive {
+            top: 3%;
+            right: -20%;
+        }
+    }
+
+    @media (max-width: 479px) {
+
+        #i {
+            top: -6%;
+        } 
+
+        #web {
+            left: 5%;
+        } 
+    
+        #developer {
+            left: 5%;
+        } 
+
+        #planet-olive {
+            top: 1.5%;
+            right: -20%;
+        }
+    }
+}
