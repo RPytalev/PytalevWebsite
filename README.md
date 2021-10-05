@@ -1,0 +1,1 @@
+# PytalevWebsite Here is my own path from 0 to my own finished website. I studied a lot, worked hard, and was frustrated by temporary failures, rejoiced like a child in success, and in the end I did it. Of course I'm a little tired, but I'm very happy!
