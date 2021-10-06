@@ -1,10 +1,12 @@
 .sectionFifthStage {
     @extend %section-row;
+    justify-content: center;
+    align-items: center;
 
     #contact {
         position: absolute;
         left: 105%;
-        top: -12%;
+        top: -17%;
         transition: 1s ease;
     } 
 
@@ -24,7 +26,7 @@
 
     #collaboration {
         top: 30%;
-        left: 8%;
+        left: 7%;
         @extend %contactLink; 
     }
 
@@ -42,8 +44,8 @@
 
     #spaceman-3 {
         position: absolute;
-        top: 34%;
-        left: 28.9%;
+        top: 32%;
+        left: 27%;
         width: 45%;
         height: 45%;
         opacity: 0;
@@ -51,23 +53,32 @@
         transition: 1s ease;
     }
 
-    #planet-orange-2 {
-        @extend %planet;
-        top: 17%;
-        left: 15%;
-    }
+    .checkpoint-four {
 
-    #ring-four {
-        @extend %ring;
-        top: 22%;
-        left: 22%;
+        @extend %checkpoint;
+
+            #ring-four {
+                @extend %ring;
+            }
+
+            .planet-four {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                #planet-orange-2 {
+                    @extend %planet;
+                }
+            }
     }
 
     a p:hover {
         color: #ff7800;
     }
 
-    @media (min-width: 960px) and (max-width: 1199px) {
+    @media (min-width: 960px) {
 
         #contact {
             top: -22%;
@@ -78,6 +89,7 @@
         }
 
         #collaboration {
+            left: 2%;
             top: 24%;
         }
     
@@ -106,11 +118,6 @@
             top: 70%;
             left: 5%;
         }
-
-        #planet-orange-2 {
-            top: 15%;
-            left: 17%;
-        }
     }
 
     @media (min-width: 480px) and (max-width: 759px) {
@@ -131,11 +138,6 @@
         #training {
             top: 70%;
             left: 4%;
-        }
-
-        #planet-orange-2 {
-            top: 14%;
-            left: 16%;
         }
     }
 
@@ -162,10 +164,33 @@
             top: 68%;
             left: 4%;
         }
+    }
 
-        #planet-orange-2 {
-            top: 13.5%;
-            left: 16%;
+    @media (max-height: 320px) {
+
+        #collaboration {
+            top: 16%;
+            left: 2%;
+            @extend %contactLink; 
+        }
+
+        #training {
+            top: 65%;
+            left: 6%;
+        }
+    }
+
+    @media (max-height: 700px) {
+
+        #me {
+            top: 67%;
+            left: 3%;
+            transition: 1s ease;
+        } 
+
+        #training {
+            top: 65%;
+            left: 10%;
         }
     }
 }

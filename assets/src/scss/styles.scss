@@ -129,13 +129,24 @@ p {
   z-index: 3;
 }
 
+%checkpoint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
+  height: 60rem;
+  object-fit: contain;
+}
+
 %planet {
   position: absolute;
   width: 80%;
   height: 80%;
+  padding-left: 6%;
+  padding-top: 6%;
   z-index: 2;
   opacity: .3;
-  transition: 1s ease;
+  transition: .6s ease;
 }
 
 %ring {
@@ -147,8 +158,12 @@ p {
   z-index: 2;
 }
 
+.sectionFirstTextBlock,
+.sectionSecondTextBlock,
+.sectionThirdTextBlock,
 .sectionFourthTextBlock {
-  padding: 7% 0;
+  opacity: 0;
+  transition: 2s ease-in-out;
 }
 
 %media-queries {
@@ -163,8 +178,9 @@ p {
 
   // }
   // @media (min-width: 960px) and (max-width: 1199px) {
-     
+  
   // }
+
   @media (max-width: 959px) {
     .header {
       visibility: hidden;
@@ -229,5 +245,40 @@ p {
     p {
       font-size: 1rem;
     }
+  }
+
+  @media (min-height: 900px) {
+    min-height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (max-height: 699px) {
+
+    #hello,
+    #i, 
+    #am, 
+    #web, 
+    #developer, 
+    #and, 
+    #can, 
+    #develop, 
+    #some, 
+    #design, 
+    #contact, 
+    #me {
+
+        font-size: 5rem;
+      }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .active-2 {
+    height: 35vh;
   }
 }

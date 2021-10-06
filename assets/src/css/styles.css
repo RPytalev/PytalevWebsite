@@ -131,7 +131,8 @@
   width: 2.6rem;
   height: 2.6rem;
   border: 0.1rem solid #fff;
-  border-radius: 5%;
+  border-radius: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 5555;
   cursor: pointer;
   visibility: hidden;
@@ -142,17 +143,27 @@
 .hamburger .hamburger-line {
   width: 60%;
   height: 0.2rem;
-  margin-bottom: 0.2rem;
+  margin: 0.1rem 0;
   background-color: #fff;
 }
 .hamburger .hamburger-line :hover {
   background-color: #ff7800;
 }
 .hamburger .active.line-1 {
-  transform: rotate(45deg) translateY(0.2rem) translateX(0.3rem);
+  position: relative;
+  top: 0.1rem;
+  margin: 0;
+  padding: 0;
+  transform: rotate(45deg);
+  transform-origin: center;
 }
 .hamburger .active.line-2 {
-  transform: rotate(135deg) translateY(0.1rem);
+  position: relative;
+  top: -0.1rem;
+  margin: 0;
+  padding: 0;
+  transform: rotate(135deg);
+  transform-origin: center;
 }
 
 .hamburger-menu {
@@ -191,6 +202,9 @@
 
 .active {
   visibility: visible;
+}
+
+.active-2 {
   height: 18vh;
 }
 
@@ -200,6 +214,7 @@ footer {
 }
 
 .sectionFirstStage {
+  justify-content: end;
   height: 90vh;
 }
 .sectionFirstStage #hello {
@@ -219,14 +234,18 @@ footer {
   left: 5%;
   top: 5%;
 }
-.sectionFirstStage #planet-orange {
-  top: -1%;
-  left: 39%;
+.sectionFirstStage .checkpoint-one #ring-one {
   visibility: hidden;
 }
-.sectionFirstStage #ring-one {
-  top: 4.7%;
-  left: 46.1%;
+.sectionFirstStage .checkpoint-one .planet-one {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionFirstStage .checkpoint-one .planet-one #planet-orange {
+  object-fit: contain;
   visibility: hidden;
 }
 .sectionFirstStage .button-up {
@@ -251,28 +270,24 @@ footer {
 .sectionFirstStage .showButtonUp {
   display: flex;
 }
-@media (min-width: 760px) and (max-width: 1199px) {
-  .sectionFirstStage #planet-orange {
-    top: -2%;
-    left: 40.5%;
-  }
-}
-@media (min-width: 480px) and (max-width: 759px) {
-  .sectionFirstStage #planet-orange {
-    top: -4%;
-    left: 41%;
+@media (max-height: 700px) {
+  .sectionFirstStage #hello {
+    top: 55%;
   }
 }
 
+.sectionSecondStage {
+  justify-content: end;
+}
 .sectionSecondStage #i {
   position: absolute;
   top: -10%;
-  left: 0;
+  left: 2%;
   opacity: 0;
 }
 .sectionSecondStage #am {
   position: absolute;
-  left: 0;
+  left: 2.5%;
   top: 5%;
   transform: rotate(90deg);
   opacity: 0;
@@ -290,25 +305,12 @@ footer {
   transform: rotateX(180deg);
   opacity: 0;
 }
-.sectionSecondStage #planet-olive {
-  top: 4.5%;
-  right: -18.5%;
-}
-.sectionSecondStage #ring-two {
-  top: 10%;
-  left: 45.5%;
-}
-@media (min-width: 760px) and (max-width: 1199px) {
-  .sectionSecondStage #planet-olive {
-    top: 4%;
-    right: -20%;
-  }
-}
-@media (min-width: 480px) and (max-width: 759px) {
-  .sectionSecondStage #planet-olive {
-    top: 3%;
-    right: -20%;
-  }
+.sectionSecondStage .checkpoint-two .planet-two {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 479px) {
   .sectionSecondStage #i {
@@ -319,10 +321,6 @@ footer {
   }
   .sectionSecondStage #developer {
     left: 5%;
-  }
-  .sectionSecondStage #planet-olive {
-    top: 1.5%;
-    right: -20%;
   }
 }
 
@@ -389,6 +387,9 @@ footer {
   }
 }
 
+.sectionFourthStage {
+  justify-content: end;
+}
 .sectionFourthStage #and {
   position: absolute;
   left: 5%;
@@ -408,43 +409,36 @@ footer {
   transition: 1s ease;
 }
 .sectionFourthStage #spaceman-2 {
-  top: 24%;
-  left: 60%;
+  top: 20%;
+  left: 59%;
 }
-.sectionFourthStage #planet-figma {
-  top: 4.5%;
-  right: -18.6%;
+.sectionFourthStage .checkpoint-three .planet-three {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.sectionFourthStage #ring-three {
-  top: 10%;
-  left: 45.5%;
-}
-@media (min-width: 760px) and (max-width: 1199px) {
-  .sectionFourthStage #planet-figma {
-    top: 4%;
-    right: -20%;
-  }
-}
-@media (min-width: 480px) and (max-width: 759px) {
-  .sectionFourthStage #planet-figma {
-    top: 3%;
-    right: -20%;
+@media (min-width: 1440px) {
+  .sectionFourthStage #some {
+    left: 2%;
+    top: 31%;
   }
 }
 @media (max-width: 478px) {
   .sectionFourthStage #some {
     top: 8%;
   }
-  .sectionFourthStage #planet-figma {
-    top: 2%;
-    right: -20%;
-  }
 }
 
+.sectionFifthStage {
+  justify-content: center;
+  align-items: center;
+}
 .sectionFifthStage #contact {
   position: absolute;
   left: 105%;
-  top: -12%;
+  top: -17%;
   transition: 1s ease;
 }
 .sectionFifthStage #me {
@@ -461,7 +455,7 @@ footer {
 }
 .sectionFifthStage #collaboration {
   top: 30%;
-  left: 8%;
+  left: 7%;
 }
 .sectionFifthStage #training {
   top: 65%;
@@ -473,26 +467,25 @@ footer {
 }
 .sectionFifthStage #spaceman-3 {
   position: absolute;
-  top: 34%;
-  left: 28.9%;
+  top: 32%;
+  left: 27%;
   width: 45%;
   height: 45%;
   opacity: 0;
   z-index: 3;
   transition: 1s ease;
 }
-.sectionFifthStage #planet-orange-2 {
-  top: 17%;
-  left: 15%;
-}
-.sectionFifthStage #ring-four {
-  top: 22%;
-  left: 22%;
+.sectionFifthStage .checkpoint-four .planet-four {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sectionFifthStage a p:hover {
   color: #ff7800;
 }
-@media (min-width: 960px) and (max-width: 1199px) {
+@media (min-width: 960px) {
   .sectionFifthStage #contact {
     top: -22%;
   }
@@ -500,6 +493,7 @@ footer {
     left: 70%;
   }
   .sectionFifthStage #collaboration {
+    left: 2%;
     top: 24%;
   }
   .sectionFifthStage #training {
@@ -522,10 +516,6 @@ footer {
     top: 70%;
     left: 5%;
   }
-  .sectionFifthStage #planet-orange-2 {
-    top: 15%;
-    left: 17%;
-  }
 }
 @media (min-width: 480px) and (max-width: 759px) {
   .sectionFifthStage #contact {
@@ -541,10 +531,6 @@ footer {
   .sectionFifthStage #training {
     top: 70%;
     left: 4%;
-  }
-  .sectionFifthStage #planet-orange-2 {
-    top: 14%;
-    left: 16%;
   }
 }
 @media (max-width: 479px) {
@@ -565,9 +551,26 @@ footer {
     top: 68%;
     left: 4%;
   }
-  .sectionFifthStage #planet-orange-2 {
-    top: 13.5%;
-    left: 16%;
+}
+@media (max-height: 320px) {
+  .sectionFifthStage #collaboration {
+    top: 16%;
+    left: 2%;
+  }
+  .sectionFifthStage #training {
+    top: 65%;
+    left: 6%;
+  }
+}
+@media (max-height: 700px) {
+  .sectionFifthStage #me {
+    top: 67%;
+    left: 3%;
+    transition: 1s ease;
+  }
+  .sectionFifthStage #training {
+    top: 65%;
+    left: 10%;
   }
 }
 
@@ -1472,16 +1475,27 @@ p {
   z-index: 3;
 }
 
-.sectionFirstStage #planet-orange, .sectionSecondStage #planet-olive, .sectionFourthStage #planet-figma, .sectionFifthStage #planet-orange-2 {
+.sectionFirstStage .checkpoint-one, .sectionSecondStage .checkpoint-two, .sectionFourthStage .checkpoint-three, .sectionFifthStage .checkpoint-four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
+  height: 60rem;
+  object-fit: contain;
+}
+
+.sectionFirstStage .checkpoint-one .planet-one #planet-orange, .sectionSecondStage .checkpoint-two .planet-two #planet-olive, .sectionFourthStage .checkpoint-three .planet-three #planet-figma, .sectionFifthStage .checkpoint-four .planet-four #planet-orange-2 {
   position: absolute;
   width: 80%;
   height: 80%;
+  padding-left: 6%;
+  padding-top: 6%;
   z-index: 2;
   opacity: 0.3;
-  transition: 1s ease;
+  transition: 0.6s ease;
 }
 
-.sectionFirstStage #ring-one, .sectionSecondStage #ring-two, .sectionFourthStage #ring-three, .sectionFifthStage #ring-four {
+.sectionFirstStage .checkpoint-one #ring-one, .sectionSecondStage .checkpoint-two #ring-two, .sectionFourthStage .checkpoint-three #ring-three, .sectionFifthStage .checkpoint-four #ring-four {
   position: absolute;
   width: 60%;
   height: 60%;
@@ -1490,8 +1504,12 @@ p {
   z-index: 2;
 }
 
+.sectionFirstTextBlock,
+.sectionSecondTextBlock,
+.sectionThirdTextBlock,
 .sectionFourthTextBlock {
-  padding: 7% 0;
+  opacity: 0;
+  transition: 2s ease-in-out;
 }
 
 @media (max-width: 959px) {
@@ -1540,4 +1558,35 @@ p {
   .container p {
     font-size: 1rem;
   }
+}
+@media (min-height: 900px) {
+  .container {
+    min-height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media (max-height: 699px) {
+  .container #hello,
+.container #i,
+.container #am,
+.container #web,
+.container #developer,
+.container #and,
+.container #can,
+.container #develop,
+.container #some,
+.container #design,
+.container #contact,
+.container #me {
+    font-size: 5rem;
+  }
+  .container p {
+    font-size: 1.5rem;
+  }
+}
+.container .active-2 {
+  height: 35vh;
 }
