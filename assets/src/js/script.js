@@ -25,12 +25,6 @@ window.addEventListener('DOMContentLoaded', function() {
           logo.style.top = '4.3rem';
           logo.style.left = '4.5rem';
         }
-        // if(width > 768 && width <= 1024) {
-        //   hello.style.transform = 'translateX(-200%)';
-        // }
-        // if(height < 700) {
-        //   hello.style.transform = 'translateX(-160%)';
-        // }
         if(width < 400) {
           hello.style.transform = 'translateX(-60%)';
         }
@@ -116,9 +110,6 @@ window.addEventListener('scroll', function() {
       if(value < height / 4 && width <= 1024) {
         hello.style.transform = 'translateX(-60%)';
       }
-      // if(value < height / 4 && width > 768 && width <= 1024) {
-      //   hello.style.transform = 'translateX(-200%)';
-      // }
       if(value > height / 2) {
         sectionFirstTextBlock.style.opacity = '1';
       }
@@ -228,7 +219,7 @@ window.addEventListener('scroll', function() {
         planetPug.style.opacity = '.3';
         planetVsc.style.opacity = '.3';
       }
-      if(value > height * 3.4) {
+      if(value > height * 3.8) {
         sectionThirdTextBlock.style.opacity = '0';
         spaceman1.style.opacity = '0';
         ringThree.style.opacity = '1';
@@ -238,18 +229,16 @@ window.addEventListener('scroll', function() {
         design.style.top = '60%';
         some.style.opacity = '1';
       }
-      if(value < height * 3.4) {
+      if(value < height * 4) {
         ringThree.style.opacity = '0';
         ringThree.style.transform = 'rotate(-225deg)';
         spaceman2.style.opacity = '0';
         planetFigma.style.opacity = '.3';
         design.style.top = '24%';
         some.style.opacity = '0';
-      }
-      if(value < height * 4) {
         sectionFourthTextBlock.style.opacity = '0';
       }
-      if(value > height * 4) {
+      if(value > height * 4.5) {
         sectionFourthTextBlock.style.opacity = '1';
         spaceman2.style.opacity = '0';
         planetFigma.style.opacity = '.3';
@@ -258,10 +247,10 @@ window.addEventListener('scroll', function() {
         ringFour.style.opacity = '1';
         ringFour.style.transform = 'rotate(-360deg)';
         ringFour.style.transition = '1s ease';
+        design.style.top = '24%';
+        some.style.opacity = '0';
         planetOrange2.style.opacity = '1';
         contact.style.transform = 'translateX(-120%)';
-      }
-      if(value > height * 4.5) {
         me.style.transform = 'translateX(150%)';
       }
       if(value > height * 4.5 && width > 768) {
