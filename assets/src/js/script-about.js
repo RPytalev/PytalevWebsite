@@ -82,6 +82,7 @@ var lineOne = document.querySelector('.line-1');
 var lineTwo = document.querySelector('.line-2');
 hamburger.addEventListener('click', function() {
   hamburgerMenu.classList.toggle('active');
+  hamburgerMenu.classList.toggle('active-2');
   lineOne.classList.toggle('active');
   lineTwo.classList.toggle('active');
 });
