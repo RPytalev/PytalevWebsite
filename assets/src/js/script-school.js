@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }, 200);
 });
 
-var logo = document.querySelector('.logo');
+var logo = document.getElementById('logo');
 logo.addEventListener('mouseenter', function() {
     var logoOrange = document.getElementById('logo-orange');
     var logoWhite = document.getElementById('logo-white');
@@ -44,29 +44,39 @@ function getTime(end) {
     };
   }
   
-  function initTimer(timer, end) {
-    var timer = document.getElementById(timer);
-    var d = timer.querySelector('.days');
-    var h = timer.querySelector('.hours');
-    var m = timer.querySelector('.minutes');
-    var s = timer.querySelector('.seconds');
-  
-    function updateTimer() {
-      var t = getTime(end);
-  
-      d.innerHTML = t.days;
-      h.innerHTML = ('0' + t.hours).slice(-2);
-      m.innerHTML = ('0' + t.minutes).slice(-2);
-      s.innerHTML = ('0' + t.seconds).slice(-2);
-  
-      if (t.total <= 0) {
-        clearInterval(timeR);
-      }
+function initTimer(timer, end) {
+  var timer = document.getElementById(timer);
+  var d = timer.querySelector('.days');
+  var h = timer.querySelector('.hours');
+  var m = timer.querySelector('.minutes');
+  var s = timer.querySelector('.seconds');
+
+  function updateTimer() {
+    var t = getTime(end);
+
+    d.innerHTML = t.days;
+    h.innerHTML = ('0' + t.hours).slice(-2);
+    m.innerHTML = ('0' + t.minutes).slice(-2);
+    s.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeR);
     }
-  
-    updateTimer();
-    var timeR = setInterval(updateTimer, 1000);
   }
+
+  updateTimer();
+  var timeR = setInterval(updateTimer, 1000);
+}
   
-  var deadline="September 29 2022 00:00:00 GMT+0300";
-  initTimer('timer', deadline);
+var deadline="September 29 2022 00:00:00 GMT+0300";
+initTimer('timer', deadline);
+
+var hamburger = document.querySelector('.hamburger');
+var hamburgerMenu = document.querySelector('.hamburger-menu');
+var lineOne = document.querySelector('.line-1');
+var lineTwo = document.querySelector('.line-2');
+hamburger.addEventListener('click', function() {
+  hamburgerMenu.classList.toggle('active');
+  lineOne.classList.toggle('active');
+  lineTwo.classList.toggle('active');
+});

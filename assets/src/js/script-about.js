@@ -18,7 +18,7 @@ buttonUp2.addEventListener('mouseleave', function() {
     buttonUpOrange2.style.display = 'none';
 });
 
-var logo = document.querySelector('.logo');
+var logo = document.getElementById('logo');
 logo.addEventListener('mouseenter', function() {
     var logoOrange = document.getElementById('logo-orange');
     var logoWhite = document.getElementById('logo-white');
@@ -75,3 +75,13 @@ function typeWriter() {
 }
 
 typeWriter();
+
+var hamburger = document.querySelector('.hamburger');
+var hamburgerMenu = document.querySelector('.hamburger-menu');
+var lineOne = document.querySelector('.line-1');
+var lineTwo = document.querySelector('.line-2');
+hamburger.addEventListener('click', function() {
+  hamburgerMenu.classList.toggle('active');
+  lineOne.classList.toggle('active');
+  lineTwo.classList.toggle('active');
+});
