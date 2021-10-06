@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var spacemanZero = document.getElementById('spaceman-0');
     var hello = document.getElementById('hello');
     var ringOne = document.getElementById('ring-one');
+    var logo = document.getElementById('logo');
     var width = document.documentElement.clientWidth;
 
     setTimeout(function () {
@@ -19,6 +20,9 @@ window.addEventListener('DOMContentLoaded', function() {
         ringOne.style.transform = 'rotate(225deg)';
         if(width <= 768) {
           hello.style.transform = 'translateX(-60%)';
+          logo.style.position = 'absolute';
+          logo.style.top = '4.3rem';
+          logo.style.left = '4.5rem';
         }
         if(width > 768 && width <= 1024) {
           hello.style.transform = 'translateX(-200%)';
@@ -275,7 +279,7 @@ window.addEventListener('scroll', function() {
     buttonUpOrange.style.display = 'flex';
 });
 
-var logo = document.querySelector('.logo');
+var logo = document.getElementById('logo');
 logo.addEventListener('mouseenter', function() {
   var logoOrange = document.getElementById('logo-orange');
   var logoWhite = document.getElementById('logo-white');
@@ -333,4 +337,14 @@ training.addEventListener('mouseenter', function() {
 training.addEventListener('mouseleave', function() {
   var ringFour = document.getElementById('ring-four');
   ringFour.style.transform = 'rotate(0deg)';
+});
+
+var hamburger = document.querySelector('.hamburger');
+var hamburgerMenu = document.querySelector('.hamburger-menu');
+var lineOne = document.querySelector('.line-1');
+var lineTwo = document.querySelector('.line-2');
+hamburger.addEventListener('click', function() {
+  hamburgerMenu.classList.toggle('active');
+  lineOne.classList.toggle('active');
+  lineTwo.classList.toggle('active');
 });
