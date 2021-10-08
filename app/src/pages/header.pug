@@ -1,0 +1,19 @@
+header.header
+    a.header-menu__link#logo(href='index.html' role='button')
+        .img-wrapper
+            img#logo-white(src="src/img/src-img/logo-white.svg" alt="Logo white uppercase letter R image")
+            img#logo-orange(src="src/img/src-img/logo-orange.svg" alt="Logo orange uppercase letter R image")
+    ul.header-menu__list
+        each name in ['studio', 'school', 'about']
+                li.header-menu__item
+                    a.header-menu__link(id=name href=name + '.html' role='button')= name
+    .hamburger
+          .hamburger-line.line-1
+          .hamburger-line.line-2
+    .hamburger-menu 
+        ul.hamburger-menu__list 
+            li.hamburger-menu__item 
+                a.hamburger-menu__link(href='index.html' role='button') home
+            each name in ['studio', 'school', 'about']
+                li.hamburger-menu__item
+                    a.hamburger-menu__link(href=name + '.html' role='button')= name

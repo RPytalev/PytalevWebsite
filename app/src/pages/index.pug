@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width initial-scale=1.0")
+    meta(name="author" content="Roman Pytalev")
+    meta(name="Copyright" content="Roman Pytalev")
+    meta(name="description" content="Pytalev's web studio and school is always open to web developers. Let's get party started. HTML, CSS and of course JavaScript naturally is here")
+    link(rel="shortcut icon" type="image/png" href="favicon.png")
+    link(rel="stylesheet", href="styles.min.css")
+    title Roman Pytalev studio &amp; school pytalev.com
+  body 
+    .spinner 
+      .spinner__ctr-comp
+        - for (var i = 0; i < 8; i++)
+          span.spinner__blade
+    .container
+      include ./header.pug
+      include ./sectionFirstStage.pug 
+      include ./sectionFirstTextBlock.pug 
+      include ./sectionSecondStage.pug 
+      include ./sectionSecondTextBlock.pug 
+      include ./sectionThirdStage.pug 
+      include ./sectionThirdTextBlock.pug 
+      include ./sectionFourthStage.pug 
+      include ./sectionFourthTextBlock.pug 
+      include ./sectionFifthStage.pug 
+    script(src="script.min.js") 
