@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       clearInterval(blinkerOne);
       clearInterval(blinkerTwo);
-    }, 31000000);
+    }, 31000);
 
     var markerOne = document.getElementById('marker-1');
     
